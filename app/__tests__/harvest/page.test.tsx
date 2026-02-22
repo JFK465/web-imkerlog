@@ -4,6 +4,6 @@ import HarvestPage from '@/app/harvest/page'
 describe('HarvestPage', () => {
   it('renders harvest page headline', () => {
     render(<HarvestPage />)
-    expect(screen.getByText('Ernte-Tracker')).toBeInTheDocument()
+    expect(screen.getByText('Honig-Ernte dokumentieren und Etiketten erstellen')).toBeInTheDocument()
   })
 })

@@ -7,8 +7,9 @@ import { FeaturesSection } from "@/components/marketing/sections/FeaturesSection
 import { TrustElements } from "@/components/marketing/sections/TrustElements"
 import { FAQSection } from "@/components/marketing/sections/FAQSection"
 import { CTASection } from "@/components/marketing/sections/CTASection"
-import { OrganizationSchema, BetaSoftwareSchema } from "@/components/seo/JsonLd"
+import { OrganizationSchema, BetaSoftwareSchema, FAQSchema } from "@/components/seo/JsonLd"
 import { siteConfig, betaConfig } from "@/lib/seo-config"
+import { faqData } from "@/lib/faq-data"
 
 export default function HomePage() {
   return (
@@ -25,6 +26,7 @@ export default function HomePage() {
         url={siteConfig.url}
         betaStartDate={betaConfig.betaStartDate}
       />
+      <FAQSchema faqs={faqData} />
 
       {/* Header */}
       <Header />
@@ -59,7 +61,7 @@ export default function HomePage() {
 
         <TrustElements />
 
-        <FAQSection />
+        <FAQSection faqs={faqData} />
 
         <CTASection
           problem="Zeit am Bienenstand statt am Schreibtisch verbringen"

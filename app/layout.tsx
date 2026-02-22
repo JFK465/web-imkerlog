@@ -1,10 +1,21 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Inter, Playfair_Display } from "next/font/google"
 import "./globals.css"
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-body",
+  display: "swap",
+})
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+})
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://imker-logbuch-pro.de"),
   title: {
     default: "Bienenverwaltung digital -- Imker-Logbuch Pro",
     template: "%s | Imker-Logbuch Pro",
@@ -30,6 +41,15 @@ export const metadata: Metadata = {
       "Smarte Verwaltung für Hobby-Imker und Direktvermarkter. Rechtskonform, mobil, einfach.",
     siteName: "Imker-Logbuch Pro",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Imker-Logbuch Pro -- Smarte Bienenverwaltung",
+    description:
+      "Smarte Verwaltung für Hobby-Imker und Direktvermarkter. Rechtskonform, mobil, einfach.",
+  },
+  alternates: {
+    canonical: "/",
+  },
   robots: {
     index: true,
     follow: true,
@@ -43,7 +63,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.variable} ${playfair.variable} ${inter.className}`}>
+        {children}
+      </body>
     </html>
   )
 }

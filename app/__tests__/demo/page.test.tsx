@@ -4,7 +4,7 @@ import DemoPage from '@/app/demo/page'
 describe('DemoPage', () => {
   it('renders demo headline', () => {
     render(<DemoPage />)
-    expect(screen.getByText('Probier es selbst')).toBeInTheDocument()
+    expect(screen.getByText('QR-Code scannen und Bienenstock in 30 Sekunden dokumentieren')).toBeInTheDocument()
   })
 
   it('renders QRScanAnimation', () => {
