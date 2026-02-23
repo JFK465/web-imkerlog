@@ -1,7 +1,8 @@
 export const NAV_LINKS = [
-  { label: "Demo", href: "/demo" },
-  { label: "Wetter", href: "/weather" },
-  { label: "Ernte", href: "/harvest" },
+  { label: "Funktionen", href: "/funktionen" },
+  { label: "Preise", href: "/preise" },
+  { label: "Wissen", href: "/wissen" },
+  { label: "Tools", href: "/tools" },
   { label: "Blog", href: "/blog" },
 ]
 
@@ -14,15 +15,29 @@ export const SOCIAL_LINKS = {
 
 export const FOOTER_LINKS = {
   produkt: [
-    { label: "Demo", href: "/demo" },
-    { label: "Wetter", href: "/weather" },
-    { label: "Ernte-Tracker", href: "/harvest" },
-    { label: "Blog", href: "/blog" },
+    { label: "Funktionen", href: "/funktionen" },
+    { label: "Preise", href: "/preise" },
+    { label: "Software", href: "/bienenverwaltung-software" },
+    { label: "Tools", href: "/tools" },
   ],
-  unternehmen: [{ label: "Kontakt", href: "mailto:kontakt@imker-logbuch-pro.de" }],
+  branchen: [
+    { label: "Hobby-Imker", href: "/hobby-imker" },
+    { label: "Direktvermarkter", href: "/direktvermarkter" },
+    { label: "Imkereien", href: "/imkereien" },
+  ],
+  ressourcen: [
+    { label: "Wissen", href: "/wissen" },
+    { label: "Blog", href: "/blog" },
+    { label: "FAQ", href: "/faq" },
+  ],
+  unternehmen: [
+    { label: "Kontakt", href: "/kontakt" },
+    { label: "Über uns", href: "/ueber-uns" },
+  ],
   rechtliches: [
     { label: "Impressum", href: "/impressum" },
     { label: "Datenschutz", href: "/datenschutz" },
+    { label: "AGB", href: "/agb" },
   ],
 }
 

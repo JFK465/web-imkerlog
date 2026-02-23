@@ -1,0 +1,21 @@
+{
+  "projektName": "imkerlog",
+  "displayName": "Imker-Logbuch Pro",
+  "domain": "imker-logbuch-pro.de",
+  "appDomain": "app.imker-logbuch-pro.de",
+  "zielgruppe": "Hobby-Imker und Direktvermarkter",
+  "problem": "Papierbestandsbuch ist unvollständig, keine Chargenverfolgung für Honig, Zeitverlust durch Suchen und Organisieren",
+  "loesung": "Mobile-first Bienenverwaltung mit QR-Codes am Stock, Sprach- und Button-Eingabe für den Bienenstand",
+  "branche": "Imkerei / Landwirtschaft",
+  "keyword": "bienenverwaltung-software",
+  "version": "beta",
+  "features": [
+    "Stockkarten-Digitalisierung",
+    "QR-Code am Bienenstock",
+    "Bestandsbuch digital (rechtskonform)",
+    "Honig Chargenverfolgung",
+    "Varroa Kontrolle und Prognose",
+    "Wetter-Integration",
+    "Etiketten-Generator"
+  ]
+}

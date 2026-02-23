@@ -1,13 +1,30 @@
 import type { Metadata } from "next"
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs"
 import { QRScanAnimation } from "@/components/demo/QRScanAnimation"
 import { QuickFormDemo } from "@/components/demo/QuickFormDemo"
 import { HowToSchema } from "@/components/seo/JsonLd"
+import { siteConfig } from "@/lib/seo-config"
 
 export const metadata: Metadata = {
   title: "QR-Code Demo: Bienenstock-Dokumentation in 30 Sekunden",
   description:
     "Erleben Sie, wie einfach die Bienenstock-Dokumentation mit QR-Code funktioniert. Scannen, dokumentieren, fertig -- auch mit Handschuhen.",
   alternates: { canonical: "/demo" },
+  openGraph: {
+    title: "QR-Code Demo: Bienenstock-Dokumentation in 30 Sekunden",
+    description:
+      "Erleben Sie, wie einfach die Bienenstock-Dokumentation mit QR-Code funktioniert. Scannen, dokumentieren, fertig.",
+    url: `${siteConfig.url}/demo`,
+    type: "website",
+    locale: "de_DE",
+    siteName: "Imker-Logbuch Pro",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "QR-Code Demo: Bienenstock-Dokumentation in 30 Sekunden",
+    description:
+      "Erleben Sie, wie einfach die Bienenstock-Dokumentation mit QR-Code funktioniert.",
+  },
 }
 
 const howToSteps = [
@@ -27,12 +44,14 @@ const howToSteps = [
 
 export default function DemoPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-amber-50 to-orange-50 py-20">
+    <>
       <HowToSchema
         name="QR-Code Demo: Bienenstock-Dokumentation in 30 Sekunden"
         description="So dokumentieren Sie Ihre Bienenstock-Durchsicht in wenigen Sekunden mit dem QR-Code-System von Imker-Logbuch Pro."
         steps={howToSteps}
       />
+      <Breadcrumbs items={[{ name: "Demo", href: "/demo" }]} />
+      <main className="min-h-screen bg-gradient-to-b from-amber-50 to-orange-50 py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-earth-800 mb-4">
@@ -57,5 +76,6 @@ export default function DemoPage() {
         </div>
       </div>
     </main>
+    </>
   )
 }

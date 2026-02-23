@@ -1,4 +1,7 @@
 import Link from "next/link"
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs"
+import { WebPageSchema } from "@/components/seo/StructuredData"
+import { siteConfig } from "@/lib/seo-config"
 import { getBlogPosts } from "@/lib/blog"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import type { Metadata } from "next"
@@ -8,13 +11,35 @@ export const metadata: Metadata = {
   description:
     "Praxis-Tipps für Hobby-Imker: Varroa-Behandlung, Honig-Ernte, Bestandsbuch-Führung und digitale Werkzeuge für die moderne Imkerei.",
   alternates: { canonical: "/blog" },
+  openGraph: {
+    title: "Imkerei-Blog: Tipps für Hobby-Imker und Direktvermarkter",
+    description:
+      "Praxis-Tipps für Hobby-Imker: Varroa-Behandlung, Honig-Ernte, Bestandsbuch-Führung und digitale Werkzeuge für die moderne Imkerei.",
+    url: `${siteConfig.url}/blog`,
+    type: "website",
+    locale: "de_DE",
+    siteName: "Imker-Logbuch Pro",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Imkerei-Blog: Tipps für Hobby-Imker und Direktvermarkter",
+    description:
+      "Praxis-Tipps für Hobby-Imker: Varroa-Behandlung, Honig-Ernte, Bestandsbuch-Führung und digitale Werkzeuge.",
+  },
 }
 
 export default function BlogPage() {
   const posts = getBlogPosts()
 
   return (
-    <div className="min-h-screen py-12 md:py-24">
+    <>
+      <WebPageSchema
+        title="Imkerei-Blog: Tipps für Hobby-Imker und Direktvermarkter"
+        description="Praxis-Tipps für Hobby-Imker: Varroa-Behandlung, Honig-Ernte, Bestandsbuch-Führung und digitale Werkzeuge für die moderne Imkerei."
+        path="/blog"
+      />
+      <Breadcrumbs items={[{ name: "Blog", href: "/blog" }]} />
+      <div className="min-h-screen py-12 md:py-24">
       <div className="container px-4 md:px-6">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-bold mb-4">Imkerei-Blog: Tipps für Hobby-Imker</h1>
@@ -73,5 +98,6 @@ export default function BlogPage() {
         </div>
       </div>
     </div>
+    </>
   )
 }
