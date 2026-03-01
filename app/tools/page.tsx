@@ -1,31 +1,34 @@
-import type { Metadata } from "next"
-import Link from "next/link"
-import { Breadcrumbs } from "@/components/layout/Breadcrumbs"
-import { WebPageSchema } from "@/components/seo/StructuredData"
-import { siteConfig } from "@/lib/seo-config"
-import { Calculator, Bug, ArrowRight } from "lucide-react"
+import type { Metadata } from "next";
+import Link from "next/link";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { WebPageSchema } from "@/components/seo/StructuredData";
+import { siteConfig } from "@/lib/seo-config";
+import { Calculator, Bug, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Tools & Rechner – Imker-Logbuch Pro",
-  description: "Nützliche Tools und Rechner für Imker: Honig-Ernte-Rechner, Varroa-Prognose und mehr.",
+  title: "Kostenlose Tools und Rechner fuer Imker",
+  description:
+    "Kostenlose Online-Tools und Rechner fuer Imker: Honig-Ernte-Rechner, Varroa-Prognose und weitere nuetzliche Werkzeuge fuer die digitale Bienenverwaltung.",
   alternates: {
     canonical: `${siteConfig.url}/tools`,
   },
   openGraph: {
-    title: "Tools & Rechner – Imker-Logbuch Pro",
-    description: "Nützliche Tools und Rechner für Imker.",
+    title: "Kostenlose Tools und Rechner fuer Imker | Imker-Logbuch Pro",
+    description:
+      "Kostenlose Online-Tools und Rechner fuer Imker: Honig-Ernte-Rechner, Varroa-Prognose und mehr.",
     url: `${siteConfig.url}/tools`,
   },
-}
+};
 
 const tools = [
   {
     title: "Honig-Ernte-Rechner",
-    description: "Berechnen Sie Ihren voraussichtlichen Honig-Ertrag basierend auf Ihrer Völkerzahl.",
+    description:
+      "Berechnen Sie Ihren voraussichtlichen Honig-Ertrag basierend auf Ihrer Völkerzahl.",
     href: "/tools/honig-rechner",
     icon: Calculator,
   },
-]
+];
 
 export default function ToolsPage() {
   return (
@@ -44,7 +47,8 @@ export default function ToolsPage() {
             Tools & Rechner
           </h1>
           <p className="mt-6 text-lg text-earth-600">
-            Nützliche Werkzeuge für Imker – von der Erntekalkulation bis zur Varroa-Prognose.
+            Nützliche Werkzeuge für Imker – von der Erntekalkulation bis zur
+            Varroa-Prognose.
           </p>
         </div>
       </section>
@@ -67,7 +71,9 @@ export default function ToolsPage() {
                       {tool.title}
                       <ArrowRight className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                     </h2>
-                    <p className="mt-2 text-sm text-earth-600">{tool.description}</p>
+                    <p className="mt-2 text-sm text-earth-600">
+                      {tool.description}
+                    </p>
                   </div>
                 </div>
               </Link>
@@ -95,5 +101,5 @@ export default function ToolsPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

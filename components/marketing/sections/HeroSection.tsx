@@ -1,23 +1,23 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, CheckCircle2 } from "lucide-react"
-import Link from "next/link"
-import { AnimatedSection } from "@/components/ui/animated-section"
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
+import Link from "next/link";
+import { AnimatedSection } from "@/components/ui/animated-section";
 import {
   HoneycombPattern,
   WaveDivider,
   FloatingHexagons,
-} from "@/components/ui/decorative-elements"
-import { PhoneMockup } from "@/components/marketing/PhoneMockup"
-import { DemoCTA } from "./DemoCTA"
+} from "@/components/ui/decorative-elements";
+import { DemoCTA } from "./DemoCTA";
 
 interface HeroSectionProps {
-  produktName?: string
-  hauptVorteil?: string
-  primarerCTA?: string
-  features?: string[]
+  produktName?: string;
+  hauptVorteil?: string;
+  primarerCTA?: string;
+  features?: string[];
 }
 
 export function HeroSection({
@@ -31,8 +31,8 @@ export function HeroSection({
     "Sie gestalten das Produkt mit",
   ],
 }: HeroSectionProps) {
-  const nameParts = produktName.split(" ")
-  const proIndex = nameParts.findIndex((w) => w === "Pro")
+  const nameParts = produktName.split(" ");
+  const proIndex = nameParts.findIndex((w) => w === "Pro");
 
   return (
     <section className="relative py-20 md:py-32 overflow-hidden gradient-warm">
@@ -66,16 +66,16 @@ export function HeroSection({
                 {proIndex >= 0 ? (
                   <>
                     {nameParts.slice(0, proIndex).join(" ")}{" "}
-                    <span className="gradient-text">
-                      {nameParts[proIndex]}
-                    </span>
+                    <span className="gradient-text">{nameParts[proIndex]}</span>
                     {nameParts.slice(proIndex + 1).length > 0 &&
                       " " + nameParts.slice(proIndex + 1).join(" ")}
                   </>
                 ) : (
                   <>
                     {nameParts.slice(0, -1).join(" ")}{" "}
-                    <span className="gradient-text">{nameParts[nameParts.length - 1]}</span>
+                    <span className="gradient-text">
+                      {nameParts[nameParts.length - 1]}
+                    </span>
                   </>
                 )}
               </h1>
@@ -143,13 +143,22 @@ export function HeroSection({
             </motion.div>
           </div>
 
-          {/* Right: Phone Mockup */}
+          {/* Right: Hero Image */}
           <AnimatedSection
             direction="right"
             delay={0.2}
             className="flex justify-center md:justify-end"
           >
-            <PhoneMockup />
+            <div className="relative w-full max-w-lg">
+              <Image
+                src="/images/hero.png"
+                alt="Imker-Logbuch Pro — Bienenverwaltung am Laptop mit Dashboard"
+                width={800}
+                height={450}
+                className="rounded-2xl shadow-warm-lg"
+                priority
+              />
+            </div>
           </AnimatedSection>
         </div>
       </div>
@@ -157,5 +166,5 @@ export function HeroSection({
       {/* Wave divider at bottom */}
       <WaveDivider />
     </section>
-  )
+  );
 }

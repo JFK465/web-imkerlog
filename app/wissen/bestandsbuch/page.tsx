@@ -1,17 +1,24 @@
-import type { Metadata } from "next"
-import Link from "next/link"
-import { Breadcrumbs } from "@/components/layout/Breadcrumbs"
-import { WebPageSchema } from "@/components/seo/StructuredData"
-import { siteConfig } from "@/lib/seo-config"
-import { FileText, Check, AlertCircle, Calendar, ClipboardList } from "lucide-react"
+import type { Metadata } from "next";
+import Link from "next/link";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { WebPageSchema } from "@/components/seo/StructuredData";
+import { siteConfig } from "@/lib/seo-config";
+import {
+  FileText,
+  Check,
+  AlertCircle,
+  Calendar,
+  ClipboardList,
+} from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Bestandsbuch-Pflicht für Imker – Was muss eingetragen werden?",
-  description: "Welche Eintragungen sind im Bestandsbuch Pflicht? Alle rechtlichen Anforderungen für Imker in Deutschland.",
+  title: "Bestandsbuch-Pflicht fuer Imker",
+  description:
+    "Welche Eintragungen sind im Bestandsbuch Pflicht? Alle rechtlichen Anforderungen und Dokumentationspflichten fuer Imker in Deutschland einfach erklaert.",
   alternates: {
     canonical: `${siteConfig.url}/wissen/bestandsbuch`,
   },
-}
+};
 
 export default function BestandsbuchPage() {
   return (
@@ -21,10 +28,12 @@ export default function BestandsbuchPage() {
         description="Welche Eintragungen sind im Bestandsbuch Pflicht? Alle rechtlichen Anforderungen für Imker in Deutschland."
         path="/wissen/bestandsbuch"
       />
-      <Breadcrumbs items={[
-        { name: "Wissen", href: "/wissen" },
-        { name: "Bestandsbuch-Pflicht", href: "/wissen/bestandsbuch" }
-      ]} />
+      <Breadcrumbs
+        items={[
+          { name: "Wissen", href: "/wissen" },
+          { name: "Bestandsbuch-Pflicht", href: "/wissen/bestandsbuch" },
+        ]}
+      />
 
       <section className="bg-gradient-to-b from-amber-50 via-orange-50 to-yellow-50 py-12 md:py-16">
         <div className="container mx-auto max-w-3xl px-4">
@@ -47,9 +56,10 @@ export default function BestandsbuchPage() {
           <div className="prose prose-stone prose-amber max-w-none">
             <h2>Was ist die Bestandsbuch-Pflicht?</h2>
             <p>
-              Jeder Imker in Deutschland ist verpflichtet, ein Bestandsbuch zu führen.
-              Diese Pflicht ergibt sich aus der <strong>Tierseuchenverordnung (TierSeuchV)</strong>.
-              Das Bestandsbuch dient der Seuchenprävention und ermöglicht bei einem
+              Jeder Imker in Deutschland ist verpflichtet, ein Bestandsbuch zu
+              führen. Diese Pflicht ergibt sich aus der{" "}
+              <strong>Tierseuchenverordnung (TierSeuchV)</strong>. Das
+              Bestandsbuch dient der Seuchenprävention und ermöglicht bei einem
               Ausbruch die Nachverfolgung von Bienenbewegungen.
             </p>
 
@@ -68,17 +78,18 @@ export default function BestandsbuchPage() {
 
             <h2>Aufbewahrungspflicht</h2>
             <p>
-              Das Bestandsbuch muss <strong>mindestens drei Jahre</strong> aufbewahrt
-              werden. Bei Seuchenverdacht kann die zuständige Behörde die Vorlage
-              verlangen. Auch nach Auflösung der Imkerei gilt die Aufbewahrungspflicht.
+              Das Bestandsbuch muss <strong>mindestens drei Jahre</strong>{" "}
+              aufbewahrt werden. Bei Seuchenverdacht kann die zuständige Behörde
+              die Vorlage verlangen. Auch nach Auflösung der Imkerei gilt die
+              Aufbewahrungspflicht.
             </p>
 
             <h2>Papier oder Digital?</h2>
             <p>
               Die TierSeuchV schreibt kein bestimmtes Format vor. Sie können Ihr
-              Bestandsbuch handschriftlich in einem Ordner führen oder digital mit
-              einer Software wie Imker-Logbuch Pro. Die digitale Variante bietet
-              erhebliche Vorteile:
+              Bestandsbuch handschriftlich in einem Ordner führen oder digital
+              mit einer Software wie Imker-Logbuch Pro. Die digitale Variante
+              bietet erhebliche Vorteile:
             </p>
             <ul>
               <li>Schnelle Durchsuchbarkeit</li>
@@ -113,15 +124,21 @@ export default function BestandsbuchPage() {
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <Check className="h-5 w-5 text-amber-500 mt-0.5" />
-                <span className="text-earth-700">Automatische Standort-Erfassung</span>
+                <span className="text-earth-700">
+                  Automatische Standort-Erfassung
+                </span>
               </li>
               <li className="flex items-start gap-3">
                 <Check className="h-5 w-5 text-amber-500 mt-0.5" />
-                <span className="text-earth-700">Dokumentation aller Bienenbewegungen</span>
+                <span className="text-earth-700">
+                  Dokumentation aller Bienenbewegungen
+                </span>
               </li>
               <li className="flex items-start gap-3">
                 <Check className="h-5 w-5 text-amber-500 mt-0.5" />
-                <span className="text-earth-700">Behandlungsnachweise für Varroa</span>
+                <span className="text-earth-700">
+                  Behandlungsnachweise für Varroa
+                </span>
               </li>
               <li className="flex items-start gap-3">
                 <Check className="h-5 w-5 text-amber-500 mt-0.5" />
@@ -149,19 +166,27 @@ export default function BestandsbuchPage() {
               href="/wissen/varroa"
               className="rounded-lg border border-honey-100 p-4 hover:border-honey-200 hover:bg-honey-50 transition-colors"
             >
-              <div className="font-medium text-earth-800">Varroa-Monitoring</div>
-              <div className="text-sm text-earth-500 mt-1">Behandlung und Dokumentation</div>
+              <div className="font-medium text-earth-800">
+                Varroa-Monitoring
+              </div>
+              <div className="text-sm text-earth-500 mt-1">
+                Behandlung und Dokumentation
+              </div>
             </Link>
             <Link
               href="/wissen/honig-etiketten"
               className="rounded-lg border border-honey-100 p-4 hover:border-honey-200 hover:bg-honey-50 transition-colors"
             >
-              <div className="font-medium text-earth-800">Honig-Kennzeichnung</div>
-              <div className="text-sm text-earth-500 mt-1">Pflichtangaben auf dem Etikett</div>
+              <div className="font-medium text-earth-800">
+                Honig-Kennzeichnung
+              </div>
+              <div className="text-sm text-earth-500 mt-1">
+                Pflichtangaben auf dem Etikett
+              </div>
             </Link>
           </div>
         </div>
       </section>
     </>
-  )
+  );
 }

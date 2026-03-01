@@ -1,19 +1,19 @@
-import type { Metadata } from "next"
-import { Breadcrumbs } from "@/components/layout/Breadcrumbs"
-import { QRScanAnimation } from "@/components/demo/QRScanAnimation"
-import { QuickFormDemo } from "@/components/demo/QuickFormDemo"
-import { HowToSchema } from "@/components/seo/JsonLd"
-import { siteConfig } from "@/lib/seo-config"
+import type { Metadata } from "next";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { QRScanAnimation } from "@/components/demo/QRScanAnimation";
+import { QuickFormDemo } from "@/components/demo/QuickFormDemo";
+import { HowToSchema } from "@/components/seo/JsonLd";
+import { siteConfig } from "@/lib/seo-config";
 
 export const metadata: Metadata = {
-  title: "QR-Code Demo: Bienenstock-Dokumentation in 30 Sekunden",
+  title: "QR-Code Demo: Bienenstock dokumentieren",
   description:
-    "Erleben Sie, wie einfach die Bienenstock-Dokumentation mit QR-Code funktioniert. Scannen, dokumentieren, fertig -- auch mit Handschuhen.",
+    "Erleben Sie, wie einfach die Bienenstock-Dokumentation per QR-Code funktioniert. In 30 Sekunden scannen, dokumentieren und speichern – auch mit Handschuhen.",
   alternates: { canonical: "/demo" },
   openGraph: {
-    title: "QR-Code Demo: Bienenstock-Dokumentation in 30 Sekunden",
+    title: "QR-Code Demo: Bienenstock dokumentieren | Imker-Logbuch Pro",
     description:
-      "Erleben Sie, wie einfach die Bienenstock-Dokumentation mit QR-Code funktioniert. Scannen, dokumentieren, fertig.",
+      "Erleben Sie, wie einfach die Bienenstock-Dokumentation per QR-Code funktioniert. In 30 Sekunden scannen und speichern.",
     url: `${siteConfig.url}/demo`,
     type: "website",
     locale: "de_DE",
@@ -21,11 +21,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "QR-Code Demo: Bienenstock-Dokumentation in 30 Sekunden",
+    title: "QR-Code Demo: Bienenstock dokumentieren | Imker-Logbuch Pro",
     description:
-      "Erleben Sie, wie einfach die Bienenstock-Dokumentation mit QR-Code funktioniert.",
+      "Erleben Sie, wie einfach die Bienenstock-Dokumentation per QR-Code funktioniert.",
   },
-}
+};
 
 const howToSteps = [
   {
@@ -40,7 +40,7 @@ const howToSteps = [
     name: "Eintrag speichern",
     text: "Tippen Sie auf Speichern. Der Eintrag wird sofort in Ihr digitales Bestandsbuch übernommen und ist rechtskonform archiviert.",
   },
-]
+];
 
 export default function DemoPage() {
   return (
@@ -52,30 +52,32 @@ export default function DemoPage() {
       />
       <Breadcrumbs items={[{ name: "Demo", href: "/demo" }]} />
       <main className="min-h-screen bg-gradient-to-b from-amber-50 to-orange-50 py-20">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-earth-800 mb-4">
-            QR-Code scannen und Bienenstock in 30 Sekunden dokumentieren
-          </h1>
-          <p className="text-xl text-earth-500 max-w-2xl mx-auto">
-            Scannen Sie den QR-Code an Ihrem Bienenstock und dokumentieren Sie Ihre Durchsicht
-            in Sekunden -- auch mit Handschuhen.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          <div className="space-y-6">
-            <h2 className="text-2xl font-semibold text-earth-700">1. Scan</h2>
-            <QRScanAnimation />
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-earth-800 mb-4">
+              QR-Code scannen und Bienenstock in 30 Sekunden dokumentieren
+            </h1>
+            <p className="text-xl text-earth-500 max-w-2xl mx-auto">
+              Scannen Sie den QR-Code an Ihrem Bienenstock und dokumentieren Sie
+              Ihre Durchsicht in Sekunden -- auch mit Handschuhen.
+            </p>
           </div>
 
-          <div className="space-y-6">
-            <h2 className="text-2xl font-semibold text-earth-700">2. Dokumentieren</h2>
-            <QuickFormDemo />
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="space-y-6">
+              <h2 className="text-2xl font-semibold text-earth-700">1. Scan</h2>
+              <QRScanAnimation />
+            </div>
+
+            <div className="space-y-6">
+              <h2 className="text-2xl font-semibold text-earth-700">
+                2. Dokumentieren
+              </h2>
+              <QuickFormDemo />
+            </div>
           </div>
         </div>
-      </div>
-    </main>
+      </main>
     </>
-  )
+  );
 }

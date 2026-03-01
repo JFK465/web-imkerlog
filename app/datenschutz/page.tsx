@@ -1,9 +1,10 @@
-import { siteConfig } from "@/lib/seo-config"
+import { siteConfig } from "@/lib/seo-config";
 
 export const metadata = {
   title: "Datenschutz",
-  description: "Datenschutzerklärung von Imker-Logbuch Pro",
-}
+  description:
+    "Datenschutzerklaerung von Imker-Logbuch Pro. Informationen zur Datenerfassung, Ihren Rechten und dem Umgang mit personenbezogenen Daten auf unserer Website.",
+};
 
 export default function DatenschutzPage() {
   return (
@@ -47,23 +48,22 @@ export default function DatenschutzPage() {
             <h2>4. Server-Log-Dateien</h2>
             <p>
               Der Provider der Seiten erhebt und speichert automatisch
-              Informationen in so genannten Server-Log-Dateien, die Ihr
-              Browser automatisch an uns übermittelt.
+              Informationen in so genannten Server-Log-Dateien, die Ihr Browser
+              automatisch an uns übermittelt.
             </p>
           </section>
 
           <section>
             <h2>5. Kontaktformular</h2>
             <p>
-              Wenn Sie uns per Kontaktformular Anfragen zukommen lassen,
-              werden Ihre Angaben aus dem Anfrageformular inklusive der
-              von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung
-              der Anfrage und für den Fall von Anschlussfragen bei uns
-              gespeichert.
+              Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden
+              Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort
+              angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für
+              den Fall von Anschlussfragen bei uns gespeichert.
             </p>
           </section>
         </div>
       </div>
     </div>
-  )
+  );
 }

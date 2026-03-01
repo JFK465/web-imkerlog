@@ -1,21 +1,23 @@
-import type { Metadata } from "next"
-import { PricingSection } from "@/components/marketing/sections/PricingSection"
-import { CTASection } from "@/components/marketing/sections/CTASection"
-import { FAQSection } from "@/components/marketing/sections/FAQSection"
-import { Breadcrumbs } from "@/components/layout/Breadcrumbs"
-import { WebPageSchema, ProductSchema } from "@/components/seo/StructuredData"
-import { siteConfig } from "@/lib/seo-config"
-import { faqData } from "@/lib/faq-data"
+import type { Metadata } from "next";
+import { PricingSection } from "@/components/marketing/sections/PricingSection";
+import { CTASection } from "@/components/marketing/sections/CTASection";
+import { FAQSection } from "@/components/marketing/sections/FAQSection";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { WebPageSchema, ProductSchema } from "@/components/seo/StructuredData";
+import { siteConfig } from "@/lib/seo-config";
+import { faqData } from "@/lib/faq-data";
 
 export const metadata: Metadata = {
-  title: "Preise – Imker-Logbuch Pro",
-  description: "Transparente Preise für Imker-Software. Kostenlos starten mit der Beta-Phase. Alle Funktionen inklusive.",
+  title: "Faire Preise fuer Imker-Software",
+  description:
+    "Transparente Preise fuer Imker-Logbuch Pro. Kostenlos starten in der Beta-Phase, alle Funktionen inklusive. Faire Tarife fuer Hobby-Imker und Imkereien.",
   alternates: {
     canonical: `${siteConfig.url}/preise`,
   },
   openGraph: {
-    title: "Preise – Imker-Logbuch Pro",
-    description: "Transparente Preise für Imker-Software. Kostenlos starten mit der Beta-Phase.",
+    title: "Faire Preise fuer Imker-Software | Imker-Logbuch Pro",
+    description:
+      "Transparente Preise fuer Imker-Logbuch Pro. Kostenlos starten in der Beta-Phase, alle Funktionen inklusive.",
     url: `${siteConfig.url}/preise`,
     type: "website",
     locale: "de_DE",
@@ -23,10 +25,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Preise – Imker-Logbuch Pro",
-    description: "Transparente Preise für Imker-Software. Kostenlos starten mit der Beta-Phase.",
+    title: "Faire Preise fuer Imker-Software | Imker-Logbuch Pro",
+    description:
+      "Transparente Preise fuer Imker-Logbuch Pro. Kostenlos starten in der Beta-Phase, alle Funktionen inklusive.",
   },
-}
+};
 
 export default function PreisePage() {
   return (
@@ -49,8 +52,8 @@ export default function PreisePage() {
             Faire Preise für Imker
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-earth-600">
-            Keine versteckten Kosten, keine langen Vertragslaufzeiten.
-            Starten Sie kostenlos mit der Beta-Phase.
+            Keine versteckten Kosten, keine langen Vertragslaufzeiten. Starten
+            Sie kostenlos mit der Beta-Phase.
           </p>
         </div>
       </section>
@@ -69,11 +72,15 @@ export default function PreisePage() {
             </div>
             <div className="rounded-xl border border-amber-200 bg-amber-50 p-6 text-center">
               <p className="text-2xl font-bold text-amber-700">Rechtsrisiken</p>
-              <p className="mt-2 text-sm text-amber-600">Unvollständiges Bestandsbuch</p>
+              <p className="mt-2 text-sm text-amber-600">
+                Unvollständiges Bestandsbuch
+              </p>
             </div>
             <div className="rounded-xl border border-amber-200 bg-amber-50 p-6 text-center">
               <p className="text-2xl font-bold text-amber-700">0 €</p>
-              <p className="mt-2 text-sm text-amber-600">Imker-Logbuch Pro Beta</p>
+              <p className="mt-2 text-sm text-amber-600">
+                Imker-Logbuch Pro Beta
+              </p>
             </div>
           </div>
         </div>
@@ -86,5 +93,5 @@ export default function PreisePage() {
         zeitstempel="Beta läuft – jetzt beitreten"
       />
     </>
-  )
+  );
 }

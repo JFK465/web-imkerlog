@@ -3,7 +3,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Impressum",
   description:
-    "Impressum von Imker-Logbuch Pro – Digitales Stockbuch für Imker.",
+    "Impressum von Imker-Logbuch Pro – Angaben gemaess § 5 DDG, Kontaktinformationen, verantwortliche Person und rechtliche Hinweise zur Bienenverwaltung-Software.",
   robots: { index: true, follow: true },
 };
 

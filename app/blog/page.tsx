@@ -1,20 +1,20 @@
-import Link from "next/link"
-import { Breadcrumbs } from "@/components/layout/Breadcrumbs"
-import { WebPageSchema } from "@/components/seo/StructuredData"
-import { siteConfig } from "@/lib/seo-config"
-import { getBlogPosts } from "@/lib/blog"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import type { Metadata } from "next"
+import Link from "next/link";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { WebPageSchema } from "@/components/seo/StructuredData";
+import { siteConfig } from "@/lib/seo-config";
+import { getBlogPosts } from "@/lib/blog";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Imkerei-Blog: Tipps für Hobby-Imker und Direktvermarkter",
+  title: "Imkerei-Blog: Tipps fuer Hobby-Imker",
   description:
-    "Praxis-Tipps für Hobby-Imker: Varroa-Behandlung, Honig-Ernte, Bestandsbuch-Führung und digitale Werkzeuge für die moderne Imkerei.",
+    "Praxis-Tipps fuer Hobby-Imker im Imkerei-Blog: Varroa-Behandlung, Honig-Ernte, Bestandsbuch-Fuehrung und digitale Werkzeuge fuer die moderne Imkerei.",
   alternates: { canonical: "/blog" },
   openGraph: {
-    title: "Imkerei-Blog: Tipps für Hobby-Imker und Direktvermarkter",
+    title: "Imkerei-Blog: Tipps fuer Hobby-Imker | Imker-Logbuch Pro",
     description:
-      "Praxis-Tipps für Hobby-Imker: Varroa-Behandlung, Honig-Ernte, Bestandsbuch-Führung und digitale Werkzeuge für die moderne Imkerei.",
+      "Praxis-Tipps fuer Hobby-Imker: Varroa-Behandlung, Honig-Ernte, Bestandsbuch-Fuehrung und digitale Werkzeuge fuer die moderne Imkerei.",
     url: `${siteConfig.url}/blog`,
     type: "website",
     locale: "de_DE",
@@ -22,14 +22,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Imkerei-Blog: Tipps für Hobby-Imker und Direktvermarkter",
+    title: "Imkerei-Blog: Tipps fuer Hobby-Imker | Imker-Logbuch Pro",
     description:
-      "Praxis-Tipps für Hobby-Imker: Varroa-Behandlung, Honig-Ernte, Bestandsbuch-Führung und digitale Werkzeuge.",
+      "Praxis-Tipps fuer Hobby-Imker: Varroa-Behandlung, Honig-Ernte, Bestandsbuch-Fuehrung und digitale Werkzeuge.",
   },
-}
+};
 
 export default function BlogPage() {
-  const posts = getBlogPosts()
+  const posts = getBlogPosts();
 
   return (
     <>
@@ -40,64 +40,69 @@ export default function BlogPage() {
       />
       <Breadcrumbs items={[{ name: "Blog", href: "/blog" }]} />
       <div className="min-h-screen py-12 md:py-24">
-      <div className="container px-4 md:px-6">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold mb-4">Imkerei-Blog: Tipps für Hobby-Imker</h1>
-          <p className="text-xl text-muted-foreground mb-12">
-            Tipps und Neuigkeiten rund um die Imkerei.
-          </p>
+        <div className="container px-4 md:px-6">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl font-bold mb-4">
+              Imkerei-Blog: Tipps für Hobby-Imker
+            </h1>
+            <p className="text-xl text-muted-foreground mb-12">
+              Tipps und Neuigkeiten rund um die Imkerei.
+            </p>
 
-          <div className="grid gap-6">
-            {posts.map((post) => (
-              <Card
-                key={post.slug}
-                className="hover:border-primary/50 transition-colors"
-              >
-                <CardHeader>
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-sm text-muted-foreground">
-                      {new Date(post.date).toLocaleDateString("de-DE", {
-                        day: "numeric",
-                        month: "long",
-                        year: "numeric",
-                      })}
-                    </span>
-                    {post.tags.slice(0, 2).map((tag) => (
-                      <span
-                        key={tag}
-                        className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded"
-                      >
-                        {tag}
+            <div className="grid gap-6">
+              {posts.map((post) => (
+                <Card
+                  key={post.slug}
+                  className="hover:border-primary/50 transition-colors"
+                >
+                  <CardHeader>
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-sm text-muted-foreground">
+                        {new Date(post.date).toLocaleDateString("de-DE", {
+                          day: "numeric",
+                          month: "long",
+                          year: "numeric",
+                        })}
                       </span>
-                    ))}
-                  </div>
-                  <CardTitle className="text-2xl">
-                    <Link href={`/blog/${post.slug}`} className="hover:text-primary">
-                      {post.title}
+                      {post.tags.slice(0, 2).map((tag) => (
+                        <span
+                          key={tag}
+                          className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <CardTitle className="text-2xl">
+                      <Link
+                        href={`/blog/${post.slug}`}
+                        className="hover:text-primary"
+                      >
+                        {post.title}
+                      </Link>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground">{post.description}</p>
+                    <Link
+                      href={`/blog/${post.slug}`}
+                      className="text-primary text-sm font-medium mt-4 inline-block hover:underline"
+                    >
+                      Weiterlesen →
                     </Link>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">{post.description}</p>
-                  <Link
-                    href={`/blog/${post.slug}`}
-                    className="text-primary text-sm font-medium mt-4 inline-block hover:underline"
-                  >
-                    Weiterlesen →
-                  </Link>
-                </CardContent>
-              </Card>
-            ))}
+                  </CardContent>
+                </Card>
+              ))}
 
-            {posts.length === 0 && (
-              <p className="text-center text-muted-foreground py-12">
-                Bald finden Sie hier hilfreiche Artikel zur Imkerei.
-              </p>
-            )}
+              {posts.length === 0 && (
+                <p className="text-center text-muted-foreground py-12">
+                  Bald finden Sie hier hilfreiche Artikel zur Imkerei.
+                </p>
+              )}
+            </div>
           </div>
         </div>
       </div>
-    </div>
     </>
-  )
+  );
 }

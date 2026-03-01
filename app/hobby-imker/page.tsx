@@ -1,40 +1,45 @@
-import type { Metadata } from "next"
-import Link from "next/link"
-import { Breadcrumbs } from "@/components/layout/Breadcrumbs"
-import { WebPageSchema, FAQSchema } from "@/components/seo/StructuredData"
-import { siteConfig } from "@/lib/seo-config"
-import { Check, QrCode, FileText, Bug, Calendar, Heart } from "lucide-react"
+import type { Metadata } from "next";
+import Link from "next/link";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { WebPageSchema, FAQSchema } from "@/components/seo/StructuredData";
+import { siteConfig } from "@/lib/seo-config";
+import { Check, QrCode, FileText, Bug, Calendar, Heart } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Imker-Software für Hobby-Imker – Imker-Logbuch Pro",
-  description: "Die perfekte Imker-Software für Hobby-Imker. Einfache Dokumentation, rechtlich konform, mobile Nutzung am Bienenstand.",
+  title: "Imker-Software fuer Hobby-Imker",
+  description:
+    "Die perfekte Imker-Software fuer Hobby-Imker: Einfache Dokumentation am Bienenstand, rechtlich konformes Bestandsbuch und mobile Nutzung. Jetzt testen!",
   alternates: {
     canonical: `${siteConfig.url}/hobby-imker`,
   },
   openGraph: {
-    title: "Imker-Software für Hobby-Imker – Imker-Logbuch Pro",
-    description: "Die perfekte Imker-Software für Hobby-Imker.",
+    title: "Imker-Software fuer Hobby-Imker | Imker-Logbuch Pro",
+    description:
+      "Die perfekte Imker-Software fuer Hobby-Imker: Einfache Dokumentation am Bienenstand, rechtlich konformes Bestandsbuch.",
     url: `${siteConfig.url}/hobby-imker`,
   },
-}
+};
 
 const challenges = [
   {
     icon: FileText,
     title: "Bestandsbuch-Pflicht",
-    description: "Als Imker sind Sie zur Führung eines Bestandsbuchs verpflichtet. Papier geht verloren – digital nicht.",
+    description:
+      "Als Imker sind Sie zur Führung eines Bestandsbuchs verpflichtet. Papier geht verloren – digital nicht.",
   },
   {
     icon: Bug,
     title: "Varroa-Monitoring",
-    description: "Die Varroa-Milbe ist die größte Bedrohung. Dokumentieren Sie Befall und Behandlungserfolg.",
+    description:
+      "Die Varroa-Milbe ist die größte Bedrohung. Dokumentieren Sie Befall und Behandlungserfolg.",
   },
   {
     icon: Calendar,
     title: "Termine vergessen",
-    description: "Wann war die letzte Behandlung? Wann füttern? Automatische Erinnerungen helfen.",
+    description:
+      "Wann war die letzte Behandlung? Wann füttern? Automatische Erinnerungen helfen.",
   },
-]
+];
 
 const benefits = [
   "Bis zu 5 Völker kostenlos verwalten",
@@ -42,22 +47,24 @@ const benefits = [
   "Bestandsbuch-Export für Kontrollen",
   "Einfache Bedienung mit dem Smartphone",
   "Wettervorhersage für den Bienenstand",
-]
+];
 
 const faqItems = [
   {
     question: "Brauche ich überhaupt eine Imker-Software?",
-    answer: "Als Imker sind Sie zur Führung eines Bestandsbuchs verpflichtet. Eine digitale Lösung erleichtert dies enorm und schützt vor Bußgeldern.",
+    answer:
+      "Als Imker sind Sie zur Führung eines Bestandsbuchs verpflichtet. Eine digitale Lösung erleichtert dies enorm und schützt vor Bußgeldern.",
   },
   {
     question: "Kann ich die App auch offline nutzen?",
-    answer: "Ja, die wichtigsten Funktionen funktionieren auch ohne Internetverbindung am Bienenstand.",
+    answer:
+      "Ja, die wichtigsten Funktionen funktionieren auch ohne Internetverbindung am Bienenstand.",
   },
   {
     question: "Wie viele Völker kann ich kostenlos verwalten?",
     answer: "Im Starter-Tarif können Sie bis zu 5 Völker kostenlos verwalten.",
   },
-]
+];
 
 export default function HobbyImkerPage() {
   return (
@@ -118,8 +125,12 @@ export default function HobbyImkerPage() {
                       <QrCode className="h-6 w-6 text-amber-600" />
                     </div>
                     <div>
-                      <div className="font-semibold text-earth-900">Stock Nr. 3</div>
-                      <div className="text-sm text-earth-500">Carnica - Nordseite</div>
+                      <div className="font-semibold text-earth-900">
+                        Stock Nr. 3
+                      </div>
+                      <div className="text-sm text-earth-500">
+                        Carnica - Nordseite
+                      </div>
                     </div>
                   </div>
                   <div className="space-y-3 text-sm">
@@ -151,11 +162,16 @@ export default function HobbyImkerPage() {
           </h2>
           <div className="grid gap-6 md:grid-cols-3">
             {challenges.map((challenge, index) => (
-              <div key={index} className="rounded-xl border border-honey-100 bg-white p-6">
+              <div
+                key={index}
+                className="rounded-xl border border-honey-100 bg-white p-6"
+              >
                 <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-amber-100 mb-4">
                   <challenge.icon className="h-6 w-6 text-amber-600" />
                 </div>
-                <h3 className="text-lg font-semibold text-earth-900">{challenge.title}</h3>
+                <h3 className="text-lg font-semibold text-earth-900">
+                  {challenge.title}
+                </h3>
                 <p className="mt-2 text-earth-600">{challenge.description}</p>
               </div>
             ))}
@@ -177,27 +193,35 @@ export default function HobbyImkerPage() {
               <Check className="h-5 w-5 text-amber-500 mt-0.5" />
               <div>
                 <h3 className="font-medium text-earth-900">QR-Code scannen</h3>
-                <p className="text-sm text-earth-600">Schnell am Stock dokumentieren</p>
+                <p className="text-sm text-earth-600">
+                  Schnell am Stock dokumentieren
+                </p>
               </div>
             </div>
             <div className="flex items-start gap-3 bg-white p-4 rounded-lg">
               <Check className="h-5 w-5 text-amber-500 mt-0.5" />
               <div>
-                <h3 className="font-medium text-earth-900">Automatische Erinnerungen</h3>
+                <h3 className="font-medium text-earth-900">
+                  Automatische Erinnerungen
+                </h3>
                 <p className="text-sm text-earth-600">Nichts mehr vergessen</p>
               </div>
             </div>
             <div className="flex items-start gap-3 bg-white p-4 rounded-lg">
               <Check className="h-5 w-5 text-amber-500 mt-0.5" />
               <div>
-                <h3 className="font-medium text-earth-900">Bestandsbuch-Export</h3>
+                <h3 className="font-medium text-earth-900">
+                  Bestandsbuch-Export
+                </h3>
                 <p className="text-sm text-earth-600">Für Behördenkontrollen</p>
               </div>
             </div>
             <div className="flex items-start gap-3 bg-white p-4 rounded-lg">
               <Check className="h-5 w-5 text-amber-500 mt-0.5" />
               <div>
-                <h3 className="font-medium text-earth-900">Wetter-Integration</h3>
+                <h3 className="font-medium text-earth-900">
+                  Wetter-Integration
+                </h3>
                 <p className="text-sm text-earth-600">Besser planen</p>
               </div>
             </div>
@@ -223,5 +247,5 @@ export default function HobbyImkerPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

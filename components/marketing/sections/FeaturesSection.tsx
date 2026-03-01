@@ -1,40 +1,35 @@
-"use client"
+"use client";
 
-import type { ReactNode } from "react"
-import {
-  QrCode,
-  FileText,
-  CloudRain,
-  Mic,
-  TrendingUp,
-} from "lucide-react"
-import { AnimatedSection } from "@/components/ui/animated-section"
-import { HoneycombPattern } from "@/components/ui/decorative-elements"
-import { FeatureCard } from "@/components/ui/feature-card"
+import type { ReactNode } from "react";
+import { QrCode, FileText, CloudRain, Mic, TrendingUp } from "lucide-react";
+import { AnimatedSection } from "@/components/ui/animated-section";
+import { HoneycombPattern } from "@/components/ui/decorative-elements";
+import { FeatureCard } from "@/components/ui/feature-card";
 
 interface Feature {
-  icon: ReactNode
-  name: string
-  benefit: string
-  painPoint: string
+  icon: ReactNode;
+  name: string;
+  benefit: string;
+  painPoint: string;
+  image?: string;
 }
 
 interface FeaturesSectionProps {
-  uberschrift?: string
-  unteruberschrift?: string
-  features?: Feature[]
-  kundenZitat?: string
-  schmerzAufloesung?: string
+  uberschrift?: string;
+  unteruberschrift?: string;
+  features?: Feature[];
+  kundenZitat?: string;
+  schmerzAufloesung?: string;
 }
 
 const defaultFeatures: Feature[] = [
   {
     icon: <QrCode className="h-8 w-8" />,
     name: "Stockkarten-Digitalisierung",
-    benefit:
-      "Jeder Stock hat einen QR-Code. Scannen, dokumentieren, fertig.",
+    benefit: "Jeder Stock hat einen QR-Code. Scannen, dokumentieren, fertig.",
     painPoint:
       "Kein Zettelsuchen mehr. Mit Handschuhen und klebrigen Fingern bedienbar.",
+    image: "/images/feature-1.png",
   },
   {
     icon: <FileText className="h-8 w-8" />,
@@ -43,14 +38,15 @@ const defaultFeatures: Feature[] = [
       "Automatisch generiert nach VO (EU) 2017/625. Bereit für die Behörden.",
     painPoint:
       "Schützt vor Bußgeldern bei Kontrollen. Immer aktuell und vollständig.",
+    image: "/images/feature-2.png",
   },
   {
     icon: <TrendingUp className="h-8 w-8" />,
     name: "Ernte- & Chargenverfolgung",
-    benefit:
-      "Jede Honig-Charge ist rückverfolgbar. Von der Wabe bis zum Glas.",
+    benefit: "Jede Honig-Charge ist rückverfolgbar. Von der Wabe bis zum Glas.",
     painPoint:
       "Professioneller Verkauf erfordert Nachvollziehbarkeit. Das liefern wir.",
+    image: "/images/feature-3.png",
   },
   {
     icon: <CloudRain className="h-8 w-8" />,
@@ -67,7 +63,7 @@ const defaultFeatures: Feature[] = [
     painPoint:
       "Schnell und einfach am Bienenstand. Auch mit Helm und Handschuhen.",
   },
-]
+];
 
 export function FeaturesSection({
   uberschrift = "Was Imker-Logbuch Pro für Sie tut",
@@ -77,7 +73,10 @@ export function FeaturesSection({
   schmerzAufloesung = "Alles im Griff, vom Smartphone aus",
 }: FeaturesSectionProps) {
   return (
-    <section id="funktionen" className="relative py-16 md:py-24 bg-gradient-to-br from-honey-50 via-cream to-earth-50 overflow-hidden">
+    <section
+      id="funktionen"
+      className="relative py-16 md:py-24 bg-gradient-to-br from-honey-50 via-cream to-earth-50 overflow-hidden"
+    >
       {/* Honeycomb pattern overlay */}
       <HoneycombPattern className="opacity-20" />
 
@@ -102,6 +101,7 @@ export function FeaturesSection({
               description={feature.benefit}
               detail={feature.painPoint}
               index={index}
+              image={feature.image}
             />
           ))}
         </div>
@@ -119,5 +119,5 @@ export function FeaturesSection({
         </AnimatedSection>
       </div>
     </section>
-  )
+  );
 }

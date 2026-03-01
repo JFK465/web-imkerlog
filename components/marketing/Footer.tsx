@@ -1,15 +1,16 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { FOOTER_LINKS } from "@/lib/constants"
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
-import { HoneycombPattern } from "@/components/ui/decorative-elements"
-import { useState } from "react"
+import Link from "next/link";
+import Image from "next/image";
+import { FOOTER_LINKS } from "@/lib/constants";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { HoneycombPattern } from "@/components/ui/decorative-elements";
+import { useState } from "react";
 
 export function Footer() {
-  const [email, setEmail] = useState("")
-  const [submitted, setSubmitted] = useState(false)
+  const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
 
   return (
     <footer className="relative bg-gradient-to-b from-earth-800 to-earth-900 overflow-hidden">
@@ -21,7 +22,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
           {/* Brand column */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-1">
+            <div className="flex items-center space-x-2">
+              <Image
+                src="/logo-dark.svg"
+                alt="Imker-Logbuch Pro Logo"
+                width={32}
+                height={32}
+                className="h-8 w-8"
+              />
               <span className="text-2xl font-bold font-display text-honey-400">
                 Imker-Logbuch
               </span>
@@ -89,10 +97,10 @@ export function Footer() {
               <form
                 className="flex gap-2"
                 onSubmit={(e) => {
-                  e.preventDefault()
+                  e.preventDefault();
                   if (email.trim()) {
-                    setSubmitted(true)
-                    setEmail("")
+                    setSubmitted(true);
+                    setEmail("");
                   }
                 }}
               >
@@ -126,9 +134,7 @@ export function Footer() {
               &copy; {new Date().getFullYear()} Imker-Logbuch Pro. Alle Rechte
               vorbehalten.
             </p>
-            <span
-              className="inline-flex items-center gap-1.5 rounded-full border border-earth-600 px-3 py-0.5 text-xs text-earth-300"
-            >
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-earth-600 px-3 py-0.5 text-xs text-earth-300">
               <span className="text-base leading-none">&#127465;&#127466;</span>
               Made in Deutschland
             </span>
@@ -148,5 +154,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

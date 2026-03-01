@@ -1,28 +1,38 @@
-import type { Metadata } from "next"
-import Link from "next/link"
-import { Breadcrumbs } from "@/components/layout/Breadcrumbs"
-import { WebPageSchema, FAQSchema } from "@/components/seo/StructuredData"
-import { siteConfig } from "@/lib/seo-config"
-import { Check, Building2, Users, BarChart3, FileText, Shield } from "lucide-react"
+import type { Metadata } from "next";
+import Link from "next/link";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { WebPageSchema, FAQSchema } from "@/components/seo/StructuredData";
+import { siteConfig } from "@/lib/seo-config";
+import {
+  Check,
+  Building2,
+  Users,
+  BarChart3,
+  FileText,
+  Shield,
+} from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Imkerei Software – Gewerbliche Imkereien – Imker-Logbuch Pro",
-  description: "Die professionelle Software für gewerbliche Imkereien. Mehrbenutzer, API, individuelle Berichte.",
+  title: "Software fuer gewerbliche Imkereien",
+  description:
+    "Professionelle Imkerei-Software fuer gewerbliche Betriebe: Mehrbenutzer-Zugang, API-Schnittstelle, individuelle Berichte und dedizierter Support inklusive.",
   alternates: {
     canonical: `${siteConfig.url}/imkereien`,
   },
   openGraph: {
-    title: "Imkerei Software – Gewerbliche Imkereien – Imker-Logbuch Pro",
-    description: "Die professionelle Software für gewerbliche Imkereien.",
+    title: "Software fuer gewerbliche Imkereien | Imker-Logbuch Pro",
+    description:
+      "Professionelle Imkerei-Software fuer gewerbliche Betriebe: Mehrbenutzer-Zugang, API-Schnittstelle und individuelle Berichte.",
     url: `${siteConfig.url}/imkereien`,
   },
-}
+};
 
 const features = [
   {
     icon: Users,
     title: "Mehrbenutzer-Zugang",
-    description: "Teilen Sie den Zugang mit Mitarbeitern und Familie. Verschiedene Berechtigungsstufen.",
+    description:
+      "Teilen Sie den Zugang mit Mitarbeitern und Familie. Verschiedene Berechtigungsstufen.",
   },
   {
     icon: BarChart3,
@@ -32,14 +42,16 @@ const features = [
   {
     icon: Building2,
     title: "Standort-Verwaltung",
-    description: "Verwalten Sie mehrere Bienenstände an verschiedenen Orten zentral.",
+    description:
+      "Verwalten Sie mehrere Bienenstände an verschiedenen Orten zentral.",
   },
   {
     icon: FileText,
     title: "Individuelle Berichte",
-    description: "Erstellen Sie maßgeschneiderte Berichte für Behörden und Partner.",
+    description:
+      "Erstellen Sie maßgeschneiderte Berichte für Behörden und Partner.",
   },
-]
+];
 
 const benefits = [
   "Unbegrenzte Völkerzahl",
@@ -47,29 +59,32 @@ const benefits = [
   "API-Schnittstelle",
   "Dedizierter Support",
   "Onboarding und Schulung",
-]
+];
 
 const faqItems = [
   {
     question: "Können mehrere Mitarbeiter gleichzeitig arbeiten?",
-    answer: "Ja, der Betriebstarif ermöglicht unbegrenzte gleichzeitige Nutzer mit individuellen Berechtigungen.",
+    answer:
+      "Ja, der Betriebstarif ermöglicht unbegrenzte gleichzeitige Nutzer mit individuellen Berechtigungen.",
   },
   {
     question: "Gibt es eine Schnittstelle zu anderen Systemen?",
-    answer: "Ja, im Betriebstarif ist eine REST-API enthalten, die Sie für Integrationen nutzen können.",
+    answer:
+      "Ja, im Betriebstarif ist eine REST-API enthalten, die Sie für Integrationen nutzen können.",
   },
   {
     question: "Bieten Sie Schulungen an?",
-    answer: "Ja, im Betriebstarif ist ein Onboarding inklusive. Wir schulen Sie und Ihr Team.",
+    answer:
+      "Ja, im Betriebstarif ist ein Onboarding inklusive. Wir schulen Sie und Ihr Team.",
   },
-]
+];
 
 export default function ImkereienPage() {
   return (
     <>
       <WebPageSchema
-        title="Imkerei Software – Gewerbliche Imkereien – Imker-Logbuch Pro"
-        description="Die professionelle Software für gewerbliche Imkereien."
+        title="Software fuer gewerbliche Imkereien | Imker-Logbuch Pro"
+        description="Professionelle Imkerei-Software fuer gewerbliche Betriebe mit Mehrbenutzer-Zugang und API."
         path="/imkereien"
       />
       <FAQSchema items={faqItems} />
@@ -120,9 +135,13 @@ export default function ImkereienPage() {
                 <div className="rounded-xl bg-white p-6 shadow-lg">
                   <div className="flex items-center gap-2 mb-4">
                     <Shield className="h-5 w-5 text-amber-600" />
-                    <span className="font-semibold text-earth-900">Beispiel-Statistik</span>
+                    <span className="font-semibold text-earth-900">
+                      Beispiel-Statistik
+                    </span>
                   </div>
-                  <p className="text-xs text-earth-500 mb-4">So koennen Ihre Statistiken aussehen</p>
+                  <p className="text-xs text-earth-500 mb-4">
+                    So koennen Ihre Statistiken aussehen
+                  </p>
                   <div className="space-y-4">
                     <div>
                       <div className="flex justify-between text-sm mb-1">
@@ -130,25 +149,40 @@ export default function ImkereienPage() {
                         <span className="font-semibold text-earth-900">--</span>
                       </div>
                       <div className="h-2 bg-amber-100 rounded-full overflow-hidden">
-                        <div className="h-full bg-amber-500 rounded-full" style={{ width: "0%" }} />
+                        <div
+                          className="h-full bg-amber-500 rounded-full"
+                          style={{ width: "0%" }}
+                        />
                       </div>
                     </div>
                     <div>
                       <div className="flex justify-between text-sm mb-1">
                         <span className="text-earth-500">Honig-Ertrag</span>
-                        <span className="font-semibold text-earth-900">-- kg</span>
+                        <span className="font-semibold text-earth-900">
+                          -- kg
+                        </span>
                       </div>
                       <div className="h-2 bg-amber-100 rounded-full overflow-hidden">
-                        <div className="h-full bg-amber-500 rounded-full" style={{ width: "0%" }} />
+                        <div
+                          className="h-full bg-amber-500 rounded-full"
+                          style={{ width: "0%" }}
+                        />
                       </div>
                     </div>
                     <div>
                       <div className="flex justify-between text-sm mb-1">
-                        <span className="text-earth-500">Behandlungs-Erfolg</span>
-                        <span className="font-semibold text-earth-900">--%</span>
+                        <span className="text-earth-500">
+                          Behandlungs-Erfolg
+                        </span>
+                        <span className="font-semibold text-earth-900">
+                          --%
+                        </span>
                       </div>
                       <div className="h-2 bg-amber-100 rounded-full overflow-hidden">
-                        <div className="h-full bg-green-500 rounded-full" style={{ width: "0%" }} />
+                        <div
+                          className="h-full bg-green-500 rounded-full"
+                          style={{ width: "0%" }}
+                        />
                       </div>
                     </div>
                   </div>
@@ -167,12 +201,19 @@ export default function ImkereienPage() {
           </h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {features.map((feature, index) => (
-              <div key={index} className="rounded-xl border border-honey-100 bg-white p-6">
+              <div
+                key={index}
+                className="rounded-xl border border-honey-100 bg-white p-6"
+              >
                 <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-amber-100 mb-4">
                   <feature.icon className="h-6 w-6 text-amber-600" />
                 </div>
-                <h3 className="text-lg font-semibold text-earth-900">{feature.title}</h3>
-                <p className="mt-2 text-sm text-earth-600">{feature.description}</p>
+                <h3 className="text-lg font-semibold text-earth-900">
+                  {feature.title}
+                </h3>
+                <p className="mt-2 text-sm text-earth-600">
+                  {feature.description}
+                </p>
               </div>
             ))}
           </div>
@@ -190,28 +231,42 @@ export default function ImkereienPage() {
               <Check className="h-5 w-5 text-amber-500 mt-0.5" />
               <div>
                 <h3 className="font-medium text-earth-900">API-Zugang</h3>
-                <p className="text-sm text-earth-600">REST-API für Integrationen</p>
+                <p className="text-sm text-earth-600">
+                  REST-API für Integrationen
+                </p>
               </div>
             </div>
             <div className="flex items-start gap-3 bg-white p-4 rounded-lg">
               <Check className="h-5 w-5 text-amber-500 mt-0.5" />
               <div>
-                <h3 className="font-medium text-earth-900">Individuelle Berichte</h3>
-                <p className="text-sm text-earth-600">Maßgeschneidert für Ihre Anforderungen</p>
+                <h3 className="font-medium text-earth-900">
+                  Individuelle Berichte
+                </h3>
+                <p className="text-sm text-earth-600">
+                  Maßgeschneidert für Ihre Anforderungen
+                </p>
               </div>
             </div>
             <div className="flex items-start gap-3 bg-white p-4 rounded-lg">
               <Check className="h-5 w-5 text-amber-500 mt-0.5" />
               <div>
-                <h3 className="font-medium text-earth-900">Dedizierter Support</h3>
-                <p className="text-sm text-earth-600">Persönlicher Ansprechpartner</p>
+                <h3 className="font-medium text-earth-900">
+                  Dedizierter Support
+                </h3>
+                <p className="text-sm text-earth-600">
+                  Persönlicher Ansprechpartner
+                </p>
               </div>
             </div>
             <div className="flex items-start gap-3 bg-white p-4 rounded-lg">
               <Check className="h-5 w-5 text-amber-500 mt-0.5" />
               <div>
-                <h3 className="font-medium text-earth-900">Onboarding & Schulung</h3>
-                <p className="text-sm text-earth-600">Einführung für Ihr Team</p>
+                <h3 className="font-medium text-earth-900">
+                  Onboarding & Schulung
+                </h3>
+                <p className="text-sm text-earth-600">
+                  Einführung für Ihr Team
+                </p>
               </div>
             </div>
           </div>
@@ -236,5 +291,5 @@ export default function ImkereienPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

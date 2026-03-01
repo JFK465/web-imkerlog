@@ -1,60 +1,78 @@
-import type { Metadata } from "next"
-import Link from "next/link"
-import { Breadcrumbs } from "@/components/layout/Breadcrumbs"
-import { WebPageSchema } from "@/components/seo/StructuredData"
-import { siteConfig } from "@/lib/seo-config"
-import { Check, QrCode, FileText, Bug, Cloud, Tag, Calendar, BarChart3 } from "lucide-react"
+import type { Metadata } from "next";
+import Link from "next/link";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { WebPageSchema } from "@/components/seo/StructuredData";
+import { siteConfig } from "@/lib/seo-config";
+import {
+  Check,
+  QrCode,
+  FileText,
+  Bug,
+  Cloud,
+  Tag,
+  Calendar,
+  BarChart3,
+} from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Funktionen – Imker-Logbuch Pro",
-  description: "Alle Funktionen der Bienenverwaltung-Software im Überblick. Von Stockkarten bis Varroa-Prognose.",
+  title: "Funktionen der Bienenverwaltung-Software",
+  description:
+    "Alle Funktionen von Imker-Logbuch Pro im Ueberblick: Stockkarten, QR-Code-Dokumentation, Varroa-Prognose, Bestandsbuch und Wetter-Integration fuer Imker.",
   alternates: {
     canonical: `${siteConfig.url}/funktionen`,
   },
   openGraph: {
-    title: "Funktionen – Imker-Logbuch Pro",
-    description: "Alle Funktionen der Bienenverwaltung-Software im Überblick.",
+    title: "Funktionen der Bienenverwaltung-Software | Imker-Logbuch Pro",
+    description:
+      "Alle Funktionen von Imker-Logbuch Pro im Ueberblick: Stockkarten, QR-Code-Dokumentation, Varroa-Prognose und mehr.",
     url: `${siteConfig.url}/funktionen`,
   },
-}
+};
 
 const features = [
   {
     icon: QrCode,
     title: "QR-Code am Bienenstock",
-    description: "Jeder Stock erhält einen QR-Code. Scannen, tippen, fertig – auch mit Bienenstichen an den Fingern.",
+    description:
+      "Jeder Stock erhält einen QR-Code. Scannen, tippen, fertig – auch mit Bienenstichen an den Fingern.",
   },
   {
     icon: FileText,
     title: "Digitales Bestandsbuch",
-    description: "Rechtskonform gemäß Tierseuchenrecht. Alle Pflichteintragungen automatisch erfasst und exportierbar.",
+    description:
+      "Rechtskonform gemäß Tierseuchenrecht. Alle Pflichteintragungen automatisch erfasst und exportierbar.",
   },
   {
     icon: Bug,
     title: "Varroa-Kontrolle & Prognose",
-    description: "Dokumentieren Sie Varroa-Befall und erhalten Sie Prognosen für die Behandlung.",
+    description:
+      "Dokumentieren Sie Varroa-Befall und erhalten Sie Prognosen für die Behandlung.",
   },
   {
     icon: Tag,
     title: "Honig Chargenverfolgung",
-    description: "Volle Rückverfolgbarkeit Ihrer Honigchargen – vom Bienenstock bis zum Glas.",
+    description:
+      "Volle Rückverfolgbarkeit Ihrer Honigchargen – vom Bienenstock bis zum Glas.",
   },
   {
     icon: Cloud,
     title: "Wetter-Integration",
-    description: "Wetterdaten direkt am Bienenstand. Planen Sie Arbeiten wetterabhängig.",
+    description:
+      "Wetterdaten direkt am Bienenstand. Planen Sie Arbeiten wetterabhängig.",
   },
   {
     icon: Calendar,
     title: "Termin-Erinnerungen",
-    description: "Automatische Erinnerungen für Varroa-Kontrollen, Fütterung und andere wichtige Termine.",
+    description:
+      "Automatische Erinnerungen für Varroa-Kontrollen, Fütterung und andere wichtige Termine.",
   },
   {
     icon: BarChart3,
     title: "Statistiken & Analysen",
-    description: "Übersichtliche Auswertungen Ihrer Imkerei: Erträge, Völkerstärke, Behandlungserfolg und mehr.",
+    description:
+      "Übersichtliche Auswertungen Ihrer Imkerei: Erträge, Völkerstärke, Behandlungserfolg und mehr.",
   },
-]
+];
 
 export default function FunktionenPage() {
   return (
@@ -72,7 +90,8 @@ export default function FunktionenPage() {
             Alle Funktionen im Überblick
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-earth-600">
-            Alles was Sie für die professionelle Bienenverwaltung brauchen – in einer App.
+            Alles was Sie für die professionelle Bienenverwaltung brauchen – in
+            einer App.
           </p>
         </div>
       </section>
@@ -88,8 +107,12 @@ export default function FunktionenPage() {
                 <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-amber-100 to-orange-100">
                   <feature.icon className="h-6 w-6 text-amber-600" />
                 </div>
-                <h3 className="text-lg font-semibold text-earth-900">{feature.title}</h3>
-                <p className="mt-2 text-sm text-earth-600">{feature.description}</p>
+                <h3 className="text-lg font-semibold text-earth-900">
+                  {feature.title}
+                </h3>
+                <p className="mt-2 text-sm text-earth-600">
+                  {feature.description}
+                </p>
               </div>
             ))}
           </div>
@@ -106,28 +129,36 @@ export default function FunktionenPage() {
               <Check className="h-6 w-6 shrink-0 text-amber-500" />
               <div>
                 <h3 className="font-semibold text-earth-900">Rechtssicher</h3>
-                <p className="mt-1 text-sm text-earth-600">Bestandsbuch entspricht den gesetzlichen Anforderungen</p>
+                <p className="mt-1 text-sm text-earth-600">
+                  Bestandsbuch entspricht den gesetzlichen Anforderungen
+                </p>
               </div>
             </div>
             <div className="flex items-start gap-4 rounded-xl bg-white p-6 shadow-sm">
               <Check className="h-6 w-6 shrink-0 text-amber-500" />
               <div>
                 <h3 className="font-semibold text-earth-900">Mobile-first</h3>
-                <p className="mt-1 text-sm text-earth-600">Bedienung mit einer Hand am Bienenstand</p>
+                <p className="mt-1 text-sm text-earth-600">
+                  Bedienung mit einer Hand am Bienenstand
+                </p>
               </div>
             </div>
             <div className="flex items-start gap-4 rounded-xl bg-white p-6 shadow-sm">
               <Check className="h-6 w-6 shrink-0 text-amber-500" />
               <div>
                 <h3 className="font-semibold text-earth-900">Offline-fähig</h3>
-                <p className="mt-1 text-sm text-earth-600">Funktioniert auch ohne Internet am Bienenstand</p>
+                <p className="mt-1 text-sm text-earth-600">
+                  Funktioniert auch ohne Internet am Bienenstand
+                </p>
               </div>
             </div>
             <div className="flex items-start gap-4 rounded-xl bg-white p-6 shadow-sm">
               <Check className="h-6 w-6 shrink-0 text-amber-500" />
               <div>
                 <h3 className="font-semibold text-earth-900">Datensicher</h3>
-                <p className="mt-1 text-sm text-earth-600">Server in Deutschland, DSGVO-konform</p>
+                <p className="mt-1 text-sm text-earth-600">
+                  Server in Deutschland, DSGVO-konform
+                </p>
               </div>
             </div>
           </div>
@@ -159,5 +190,5 @@ export default function FunktionenPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

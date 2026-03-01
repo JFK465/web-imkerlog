@@ -1,4 +1,4 @@
-import { siteConfig } from "@/lib/seo-config"
+import { siteConfig } from "@/lib/seo-config";
 
 export function WebSiteSchema() {
   const schema = {
@@ -16,14 +16,14 @@ export function WebSiteSchema() {
       },
       "query-input": "required name=search_term_string",
     },
-  }
+  };
 
   return (
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
     />
-  )
+  );
 }
 
 export function OrganizationSchema() {
@@ -43,14 +43,14 @@ export function OrganizationSchema() {
       email: siteConfig.email,
       contactType: "customer service",
     },
-  }
+  };
 
   return (
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
     />
-  )
+  );
 }
 
 export function SoftwareApplicationSchema() {
@@ -67,14 +67,14 @@ export function SoftwareApplicationSchema() {
       priceCurrency: "EUR",
       availability: "https://schema.org/PreOrder",
     },
-  }
+  };
 
   return (
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
     />
-  )
+  );
 }
 
 export function WebPageSchema({
@@ -82,9 +82,9 @@ export function WebPageSchema({
   description,
   path,
 }: {
-  title: string
-  description: string
-  path: string
+  title: string;
+  description: string;
+  path: string;
 }) {
   const schema = {
     "@context": "https://schema.org",
@@ -97,18 +97,26 @@ export function WebPageSchema({
       "@type": "Organization",
       name: siteConfig.companyName,
       url: siteConfig.url,
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteConfig.url}/logo.svg`,
+      },
     },
-  }
+  };
 
   return (
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
     />
-  )
+  );
 }
 
-export function FAQSchema({ items }: { items: { question: string; answer: string }[] }) {
+export function FAQSchema({
+  items,
+}: {
+  items: { question: string; answer: string }[];
+}) {
   const schema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -120,14 +128,14 @@ export function FAQSchema({ items }: { items: { question: string; answer: string
         text: item.answer,
       },
     })),
-  }
+  };
 
   return (
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
     />
-  )
+  );
 }
 
 export function ArticleSchema({
@@ -138,12 +146,12 @@ export function ArticleSchema({
   url,
   image,
 }: {
-  title: string
-  description: string
-  datePublished: string
-  author: string
-  url: string
-  image?: string
+  title: string;
+  description: string;
+  datePublished: string;
+  author: string;
+  url: string;
+  image?: string;
 }) {
   const schema = {
     "@context": "https://schema.org",
@@ -159,17 +167,21 @@ export function ArticleSchema({
       "@type": "Organization",
       name: siteConfig.companyName,
       url: siteConfig.url,
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteConfig.url}/logo.svg`,
+      },
     },
     image: image || `${siteConfig.url}/og.png`,
     url: `${siteConfig.url}${url}`,
-  }
+  };
 
   return (
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
     />
-  )
+  );
 }
 
 export function ProductSchema({
@@ -177,9 +189,9 @@ export function ProductSchema({
   description,
   price,
 }: {
-  name: string
-  description: string
-  price: string
+  name: string;
+  description: string;
+  price: string;
 }) {
   const schema = {
     "@context": "https://schema.org",
@@ -196,12 +208,12 @@ export function ProductSchema({
       priceCurrency: "EUR",
       availability: "https://schema.org/InStock",
     },
-  }
+  };
 
   return (
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
     />
-  )
+  );
 }

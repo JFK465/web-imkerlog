@@ -1,49 +1,62 @@
-import type { Metadata } from "next"
-import Link from "next/link"
-import { Breadcrumbs } from "@/components/layout/Breadcrumbs"
-import { WebPageSchema } from "@/components/seo/StructuredData"
-import { siteConfig } from "@/lib/seo-config"
-import { BookOpen, FileText, Bug, Tag, Calendar, ArrowRight } from "lucide-react"
+import type { Metadata } from "next";
+import Link from "next/link";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { WebPageSchema } from "@/components/seo/StructuredData";
+import { siteConfig } from "@/lib/seo-config";
+import {
+  BookOpen,
+  FileText,
+  Bug,
+  Tag,
+  Calendar,
+  ArrowRight,
+} from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Wissen & Ratgeber – Imker-Logbuch Pro",
-  description: "Wichtiges Wissen für Imker: Bestandsbuch-Pflicht, Varroa-Behandlung, Honig-Kennzeichnung und mehr.",
+  title: "Imkerei-Wissen: Ratgeber und Pflichten",
+  description:
+    "Wichtiges Wissen fuer Imker: Bestandsbuch-Pflicht, Varroa-Behandlung, Honig-Kennzeichnung und praktische Tipps fuer den Alltag am Bienenstand. Jetzt lesen!",
   alternates: {
     canonical: `${siteConfig.url}/wissen`,
   },
   openGraph: {
-    title: "Wissen & Ratgeber – Imker-Logbuch Pro",
-    description: "Wichtiges Wissen für Imker: Bestandsbuch-Pflicht, Varroa-Behandlung, Honig-Kennzeichnung und mehr.",
+    title: "Imkerei-Wissen: Ratgeber und Pflichten | Imker-Logbuch Pro",
+    description:
+      "Wichtiges Wissen fuer Imker: Bestandsbuch-Pflicht, Varroa-Behandlung, Honig-Kennzeichnung und praktische Tipps.",
     url: `${siteConfig.url}/wissen`,
   },
-}
+};
 
 const topics = [
   {
     title: "Bestandsbuch-Pflicht",
-    description: "Was Sie als Imker über das Bestandsbuch wissen müssen. Rechtliche Anforderungen und Dokumentationspflichten.",
+    description:
+      "Was Sie als Imker über das Bestandsbuch wissen müssen. Rechtliche Anforderungen und Dokumentationspflichten.",
     href: "/wissen/bestandsbuch",
     icon: FileText,
   },
   {
     title: "Varroa-Monitoring",
-    description: "Alles über die Varroa-Milbe: Erkennung, Behandlung und Vorbeugung.",
+    description:
+      "Alles über die Varroa-Milbe: Erkennung, Behandlung und Vorbeugung.",
     href: "/wissen/varroa",
     icon: Bug,
   },
   {
     title: "Honig-Kennzeichnung",
-    description: "Welche Angaben müssen auf das Honig-Etikett? Rechtliche Anforderungen an die Verpackung.",
+    description:
+      "Welche Angaben müssen auf das Honig-Etikett? Rechtliche Anforderungen an die Verpackung.",
     href: "/wissen/honig-etiketten",
     icon: Tag,
   },
   {
     title: "Imker-Kalender",
-    description: "Jahresplan für Imker: Wann welche Arbeiten anstehen, von der Durchsicht bis zur Fütterung.",
+    description:
+      "Jahresplan für Imker: Wann welche Arbeiten anstehen, von der Durchsicht bis zur Fütterung.",
     href: "/wissen/imker-kalender",
     icon: Calendar,
   },
-]
+];
 
 export default function WissenPage() {
   return (
@@ -88,7 +101,9 @@ export default function WissenPage() {
                       {topic.title}
                       <ArrowRight className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                     </h2>
-                    <p className="mt-2 text-sm text-earth-600">{topic.description}</p>
+                    <p className="mt-2 text-sm text-earth-600">
+                      {topic.description}
+                    </p>
                   </div>
                 </div>
               </Link>
@@ -116,5 +131,5 @@ export default function WissenPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

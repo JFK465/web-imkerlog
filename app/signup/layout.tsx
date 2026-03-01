@@ -1,12 +1,16 @@
-import type { Metadata } from "next"
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Beta-Zugang: Imker-Logbuch Pro kostenlos testen",
+  title: "Kostenlos anmelden: Beta-Zugang sichern",
   description:
-    "Jetzt kostenlos für die Beta von Imker-Logbuch Pro anmelden. Digitale Bienenverwaltung, rechtskonformes Bestandsbuch, QR-Code-Dokumentation.",
+    "Jetzt kostenlos fuer die Beta von Imker-Logbuch Pro anmelden. Digitale Bienenverwaltung, rechtskonformes Bestandsbuch und QR-Code-Dokumentation testen.",
   alternates: { canonical: "/signup" },
-}
+};
 
-export default function SignupLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+export default function SignupLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return <>{children}</>;
 }

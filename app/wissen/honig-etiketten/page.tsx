@@ -1,17 +1,18 @@
-import type { Metadata } from "next"
-import Link from "next/link"
-import { Breadcrumbs } from "@/components/layout/Breadcrumbs"
-import { WebPageSchema } from "@/components/seo/StructuredData"
-import { siteConfig } from "@/lib/seo-config"
-import { Tag, Check, AlertCircle, Info } from "lucide-react"
+import type { Metadata } from "next";
+import Link from "next/link";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { WebPageSchema } from "@/components/seo/StructuredData";
+import { siteConfig } from "@/lib/seo-config";
+import { Tag, Check, AlertCircle, Info } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Honig-Etikett – Pflichtangaben und Gestaltung",
-  description: "Welche Angaben müssen auf das Honig-Etikett? Rechtliche Anforderungen und praktische Tipps.",
+  title: "Honig-Etikett: Pflichtangaben und Tipps",
+  description:
+    "Welche Angaben muessen auf das Honig-Etikett? Rechtliche Anforderungen, Pflichtangaben und praktische Tipps fuer Imker zur Honig-Kennzeichnung nach LMIV.",
   alternates: {
     canonical: `${siteConfig.url}/wissen/honig-etiketten`,
   },
-}
+};
 
 export default function HonigEtikettenPage() {
   return (
@@ -21,10 +22,12 @@ export default function HonigEtikettenPage() {
         description="Welche Angaben müssen auf das Honig-Etikett? Rechtliche Anforderungen und praktische Tipps."
         path="/wissen/honig-etiketten"
       />
-      <Breadcrumbs items={[
-        { name: "Wissen", href: "/wissen" },
-        { name: "Honig-Kennzeichnung", href: "/wissen/honig-etiketten" }
-      ]} />
+      <Breadcrumbs
+        items={[
+          { name: "Wissen", href: "/wissen" },
+          { name: "Honig-Kennzeichnung", href: "/wissen/honig-etiketten" },
+        ]}
+      />
 
       <section className="bg-gradient-to-b from-amber-50 via-orange-50 to-yellow-50 py-12 md:py-16">
         <div className="container mx-auto max-w-3xl px-4">
@@ -47,38 +50,42 @@ export default function HonigEtikettenPage() {
           <div className="prose prose-stone prose-amber max-w-none">
             <h2>Pflichtangaben für Honig</h2>
             <p>
-              Die Kennzeichnung von Honig ist in der <strong>Lebensmittelinformations-Verordnung (LMIV)</strong>
-              und der <strong>Honigverordnung</strong> geregelt. Folgende Angaben sind zwingend erforderlich:
+              Die Kennzeichnung von Honig ist in der{" "}
+              <strong>Lebensmittelinformations-Verordnung (LMIV)</strong>
+              und der <strong>Honigverordnung</strong> geregelt. Folgende
+              Angaben sind zwingend erforderlich:
             </p>
 
             <h3>1. Verkehrsbezeichnung</h3>
             <p>
-              Es muss eindeutig "Honig" oder eine zulässige Bezeichnung wie
-              "Blütenhonig", "Waldhonig" oder "Honigtauhonig" angegeben werden.
+              Es muss eindeutig &bdquo;Honig&ldquo; oder eine zulässige
+              Bezeichnung wie &bdquo;Blütenhonig&ldquo;, &bdquo;Waldhonig&ldquo;
+              oder &bdquo;Honigtauhonig&ldquo; angegeben werden.
             </p>
 
             <h3>2. Füllmenge</h3>
             <p>
-              Die Netto-Füllmenge muss in ml oder g angegeben werden, z.B. "500 g".
-              Ab 2024 gelten neue Regelungen.
+              Die Netto-Füllmenge muss in ml oder g angegeben werden, z.B.
+              &bdquo;500 g&ldquo;. Ab 2024 gelten neue Regelungen.
             </p>
 
             <h3>3. Mindesthaltbarkeitsdatum (MHD)</h3>
             <p>
-              Mindestens "Mindestens haltbar bis Ende:" gefolgt von Monat und Jahr.
-              Bei Honig beträgt das MHD in der Regel 2-3 Jahre.
+              Mindestens &bdquo;Mindestens haltbar bis Ende:&ldquo; gefolgt von
+              Monat und Jahr. Bei Honig beträgt das MHD in der Regel 2-3 Jahre.
             </p>
 
             <h3>4. Name und Anschrift</h3>
             <p>
-              Der Name oder die Firma des Herstellers/Abfüllers und die Anschrift
-              müssen angegeben werden.
+              Der Name oder die Firma des Herstellers/Abfüllers und die
+              Anschrift müssen angegeben werden.
             </p>
 
             <h3>5. Ursprungsland</h3>
             <p>
-              "Herkunft: Deutschland" oder das tatsächliche Ursprungsland muss
-              angegeben werden. Bei Mischungen: "EU"/"Nicht-EU" oder Länder.
+              &bdquo;Herkunft: Deutschland&ldquo; oder das tatsächliche
+              Ursprungsland muss angegeben werden. Bei Mischungen:
+              &bdquo;EU&ldquo;/&bdquo;Nicht-EU&ldquo; oder Länder.
             </p>
 
             <h3>6. Chargennummer</h3>
@@ -89,11 +96,14 @@ export default function HonigEtikettenPage() {
 
             <h3>7. Zutatenverzeichnis (bei Mischungen)</h3>
             <p>
-              Bei Honig mit Zusätzen (z.B. Nüssen) müssen alle Zutaten aufgelistet werden.
+              Bei Honig mit Zusätzen (z.B. Nüssen) müssen alle Zutaten
+              aufgelistet werden.
             </p>
 
             <h2>Empfohlene Angaben</h2>
-            <p>Folgende Angaben sind nicht verpflichtend, aber empfehlenswert:</p>
+            <p>
+              Folgende Angaben sind nicht verpflichtend, aber empfehlenswert:
+            </p>
             <ul>
               <li>Erntejahr</li>
               <li>Honigsorten (falls zutreffend)</li>
@@ -104,8 +114,8 @@ export default function HonigEtikettenPage() {
 
             <h2>Allergenkennzeichnung</h2>
             <p>
-              Honig selbst enthält keine deklarationspflichtigen Allergene.
-              Bei Produkten mit Honigzusätzen ist jedoch Vorsicht geboten.
+              Honig selbst enthält keine deklarationspflichtigen Allergene. Bei
+              Produkten mit Honigzusätzen ist jedoch Vorsicht geboten.
             </p>
           </div>
         </div>
@@ -125,11 +135,15 @@ export default function HonigEtikettenPage() {
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <Check className="h-5 w-5 text-amber-500 mt-0.5" />
-                <span className="text-earth-700">Automatische Chargennummern</span>
+                <span className="text-earth-700">
+                  Automatische Chargennummern
+                </span>
               </li>
               <li className="flex items-start gap-3">
                 <Check className="h-5 w-5 text-amber-500 mt-0.5" />
-                <span className="text-earth-700">Alle Pflichtangaben integriert</span>
+                <span className="text-earth-700">
+                  Alle Pflichtangaben integriert
+                </span>
               </li>
               <li className="flex items-start gap-3">
                 <Check className="h-5 w-5 text-amber-500 mt-0.5" />
@@ -137,7 +151,9 @@ export default function HonigEtikettenPage() {
               </li>
               <li className="flex items-start gap-3">
                 <Check className="h-5 w-5 text-amber-500 mt-0.5" />
-                <span className="text-earth-700">Rückverfolgbarkeit aus dem Bestandsbuch</span>
+                <span className="text-earth-700">
+                  Rückverfolgbarkeit aus dem Bestandsbuch
+                </span>
               </li>
             </ul>
             <Link
@@ -161,19 +177,27 @@ export default function HonigEtikettenPage() {
               href="/direktvermarkter"
               className="rounded-lg border border-honey-100 p-4 hover:border-honey-200 hover:bg-honey-50 transition-colors"
             >
-              <div className="font-medium text-earth-800">Direktvermarktung</div>
-              <div className="text-sm text-earth-500 mt-1">Honig verkaufen mit System</div>
+              <div className="font-medium text-earth-800">
+                Direktvermarktung
+              </div>
+              <div className="text-sm text-earth-500 mt-1">
+                Honig verkaufen mit System
+              </div>
             </Link>
             <Link
               href="/wissen/bestandsbuch"
               className="rounded-lg border border-honey-100 p-4 hover:border-honey-200 hover:bg-honey-50 transition-colors"
             >
-              <div className="font-medium text-earth-800">Bestandsbuch-Pflicht</div>
-              <div className="text-sm text-earth-500 mt-1">Dokumentationspflichten für Imker</div>
+              <div className="font-medium text-earth-800">
+                Bestandsbuch-Pflicht
+              </div>
+              <div className="text-sm text-earth-500 mt-1">
+                Dokumentationspflichten für Imker
+              </div>
             </Link>
           </div>
         </div>
       </section>
     </>
-  )
+  );
 }

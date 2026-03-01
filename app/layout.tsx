@@ -1,26 +1,30 @@
-import type { Metadata } from "next"
-import { Inter, Playfair_Display } from "next/font/google"
-import "./globals.css"
-import { Header } from "@/components/layout/Header"
-import { Footer } from "@/components/marketing/Footer"
-import { WebSiteSchema, OrganizationSchema, SoftwareApplicationSchema } from "@/components/seo/StructuredData"
+import type { Metadata } from "next";
+import { Inter, Playfair_Display } from "next/font/google";
+import "./globals.css";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/marketing/Footer";
+import {
+  WebSiteSchema,
+  OrganizationSchema,
+  SoftwareApplicationSchema,
+} from "@/components/seo/StructuredData";
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap",
-})
+});
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap",
-})
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://imker-logbuch-pro.de"),
   title: {
-    default: "Imker-Logbuch Pro: Bienenverwaltung Software - Jetzt kostenlos testen",
+    default: "Imker-Logbuch Pro – Bienenverwaltung Software fuer Imker",
     template: "%s | Imker-Logbuch Pro",
   },
   description:
@@ -39,7 +43,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
     url: "https://imker-logbuch-pro.de",
-    title: "Imker-Logbuch Pro: Bienenverwaltung Software - Jetzt kostenlos testen",
+    title:
+      "Imker-Logbuch Pro: Bienenverwaltung Software - Jetzt kostenlos testen",
     description:
       "Die Bienenverwaltung Software fuer Hobby-Imker und Direktvermarkter. QR-Codes, rechtskonformes Bestandsbuch, Varroa-Prognose. Jetzt kostenlos testen!",
     siteName: "Imker-Logbuch Pro",
@@ -54,7 +59,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Imker-Logbuch Pro: Bienenverwaltung Software - Jetzt kostenlos testen",
+    title:
+      "Imker-Logbuch Pro: Bienenverwaltung Software - Jetzt kostenlos testen",
     description:
       "Die Bienenverwaltung Software fuer Hobby-Imker und Direktvermarkter. QR-Codes, rechtskonformes Bestandsbuch, Varroa-Prognose.",
     images: ["/og.png"],
@@ -66,12 +72,12 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-}
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="de">
@@ -80,15 +86,15 @@ export default function RootLayout({
         <OrganizationSchema />
         <SoftwareApplicationSchema />
       </head>
-      <body className={`${inter.variable} ${playfair.variable} ${inter.className}`}>
+      <body
+        className={`${inter.variable} ${playfair.variable} ${inter.className}`}
+      >
         <div className="min-h-screen flex flex-col">
           <Header />
-          <main className="flex-1">
-            {children}
-          </main>
+          <main className="flex-1">{children}</main>
           <Footer />
         </div>
       </body>
     </html>
-  )
+  );
 }

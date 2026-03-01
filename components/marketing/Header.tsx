@@ -1,23 +1,24 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { NAV_LINKS } from "@/lib/constants"
-import { Menu, X } from "lucide-react"
-import { useState, useEffect } from "react"
-import { AnimatePresence, motion } from "framer-motion"
+import Link from "next/link";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { NAV_LINKS } from "@/lib/constants";
+import { Menu, X } from "lucide-react";
+import { useState, useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 export function Header() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 8)
-    }
-    window.addEventListener("scroll", handleScroll, { passive: true })
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      setScrolled(window.scrollY > 8);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <header
@@ -28,7 +29,14 @@ export function Header() {
       }`}
     >
       <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center space-x-1">
+        <Link href="/" className="flex items-center space-x-2">
+          <Image
+            src="/logo.svg"
+            alt="Imker-Logbuch Pro Logo"
+            width={32}
+            height={32}
+            className="h-8 w-8"
+          />
           <span className="text-xl font-bold font-display text-earth-800">
             Imker-Logbuch
           </span>
@@ -104,5 +112,5 @@ export function Header() {
         )}
       </AnimatePresence>
     </header>
-  )
+  );
 }

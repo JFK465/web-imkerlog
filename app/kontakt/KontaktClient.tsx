@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import { Breadcrumbs } from "@/components/layout/Breadcrumbs"
-import { WebPageSchema } from "@/components/seo/StructuredData"
-import { Mail, Phone, MapPin, Send, CheckCircle2 } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
+import { useState } from "react";
+import Link from "next/link";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { WebPageSchema } from "@/components/seo/StructuredData";
+import { Mail, MapPin, Send, CheckCircle2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 export function KontaktClient() {
   const [formData, setFormData] = useState({
@@ -15,20 +15,20 @@ export function KontaktClient() {
     email: "",
     betreff: "",
     nachricht: "",
-  })
-  const [submitted, setSubmitted] = useState(false)
-  const [loading, setLoading] = useState(false)
+  });
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setLoading(true)
+    e.preventDefault();
+    setLoading(true);
 
     // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000))
+    await new Promise((resolve) => setTimeout(resolve, 1000));
 
-    setSubmitted(true)
-    setLoading(false)
-  }
+    setSubmitted(true);
+    setLoading(false);
+  };
 
   return (
     <>
@@ -45,8 +45,8 @@ export function KontaktClient() {
             Kontakt
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-earth-600">
-            Haben Sie Fragen zur Software oder möchten Sie mehr erfahren?
-            Wir freuen uns auf Ihre Nachricht.
+            Haben Sie Fragen zur Software oder möchten Sie mehr erfahren? Wir
+            freuen uns auf Ihre Nachricht.
           </p>
         </div>
       </section>
@@ -60,7 +60,8 @@ export function KontaktClient() {
                 So erreichen Sie uns
               </h2>
               <p className="mt-4 text-earth-600">
-                Wir sind per E-Mail, telefonisch oder über das Kontaktformular für Sie erreichbar.
+                Wir sind per E-Mail oder über das Kontaktformular für Sie
+                erreichbar.
               </p>
 
               <div className="mt-8 space-y-6">
@@ -81,29 +82,15 @@ export function KontaktClient() {
 
                 <div className="flex items-start gap-4">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-amber-100">
-                    <Phone className="h-5 w-5 text-amber-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-medium text-earth-900">Telefon</h3>
-                    <a
-                      href="tel:+49123456789"
-                      className="mt-1 block text-sm text-earth-600 hover:text-amber-600"
-                    >
-                      +49 (0) 123 456 789
-                    </a>
-                    <p className="text-xs text-earth-400 mt-1">Mo-Fr 9-17 Uhr</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-amber-100">
                     <MapPin className="h-5 w-5 text-amber-600" />
                   </div>
                   <div>
                     <h3 className="font-medium text-earth-900">Standort</h3>
                     <p className="mt-1 text-sm text-earth-600">
-                      Imker-Logbuch Pro<br />
-                      Musterstraße 123<br />
+                      Imker-Logbuch Pro
+                      <br />
+                      Musterstraße 123
+                      <br />
                       12345 Musterstadt
                     </p>
                   </div>
@@ -115,8 +102,9 @@ export function KontaktClient() {
                   Noch in der Beta-Phase?
                 </h3>
                 <p className="mt-2 text-sm text-earth-600">
-                  Wir bieten aktuell kostenlosen Zugang für alle Imker während der Beta-Phase.
-                  Registrieren Sie sich einfach und starten Sie sofort.
+                  Wir bieten aktuell kostenlosen Zugang für alle Imker während
+                  der Beta-Phase. Registrieren Sie sich einfach und starten Sie
+                  sofort.
                 </p>
                 <Button
                   asChild
@@ -138,7 +126,8 @@ export function KontaktClient() {
                     Nachricht gesendet!
                   </h3>
                   <p className="mt-2 text-earth-600">
-                    Vielen Dank für Ihre Nachricht. Wir melden uns in Kürze bei Ihnen.
+                    Vielen Dank für Ihre Nachricht. Wir melden uns in Kürze bei
+                    Ihnen.
                   </p>
                   <Button
                     variant="outline"
@@ -233,7 +222,8 @@ export function KontaktClient() {
                   </Button>
 
                   <p className="text-xs text-center text-earth-400">
-                    Mit dem Absenden stimmen Sie unserer Datenschutzerklärung zu.
+                    Mit dem Absenden stimmen Sie unserer Datenschutzerklärung
+                    zu.
                   </p>
                 </form>
               )}
@@ -242,5 +232,5 @@ export function KontaktClient() {
         </div>
       </section>
     </>
-  )
+  );
 }

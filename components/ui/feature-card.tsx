@@ -1,14 +1,16 @@
-"use client"
+"use client";
 
-import type { ReactNode } from "react"
-import { motion } from "framer-motion"
+import type { ReactNode } from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
 
 interface FeatureCardProps {
-  icon: ReactNode
-  title: string
-  description: string
-  detail?: string
-  index?: number
+  icon: ReactNode;
+  title: string;
+  description: string;
+  detail?: string;
+  index?: number;
+  image?: string;
 }
 
 export function FeatureCard({
@@ -17,6 +19,7 @@ export function FeatureCard({
   description,
   detail,
   index = 0,
+  image,
 }: FeatureCardProps) {
   return (
     <motion.div
@@ -25,18 +28,25 @@ export function FeatureCard({
       viewport={{ once: true, margin: "-30px" }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       whileHover={{ scale: 1.02 }}
-      className="group relative bg-cream rounded-xl p-6 shadow-warm transition-all duration-300 hover:shadow-card-hover border border-transparent hover:border-honey-200"
+      className="group relative bg-cream rounded-xl overflow-hidden shadow-warm transition-all duration-300 hover:shadow-card-hover border border-transparent hover:border-honey-200"
     >
-      <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-honey-100 to-earth-100 flex items-center justify-center text-honey-600 mb-4">
-        {icon}
-      </div>
-      <h3 className="text-lg font-semibold font-display mb-2">{title}</h3>
-      <p className="text-muted-foreground text-sm leading-relaxed">
-        {description}
-      </p>
-      {detail && (
-        <p className="text-xs text-honey-600 font-medium mt-3">{detail}</p>
+      {image && (
+        <div className="relative w-full h-40 bg-white">
+          <Image src={image} alt={title} fill className="object-contain p-4" />
+        </div>
       )}
+      <div className="p-6">
+        <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-honey-100 to-earth-100 flex items-center justify-center text-honey-600 mb-4">
+          {icon}
+        </div>
+        <h3 className="text-lg font-semibold font-display mb-2">{title}</h3>
+        <p className="text-muted-foreground text-sm leading-relaxed">
+          {description}
+        </p>
+        {detail && (
+          <p className="text-xs text-honey-600 font-medium mt-3">{detail}</p>
+        )}
+      </div>
     </motion.div>
-  )
+  );
 }

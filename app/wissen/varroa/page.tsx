@@ -1,17 +1,18 @@
-import type { Metadata } from "next"
-import Link from "next/link"
-import { Breadcrumbs } from "@/components/layout/Breadcrumbs"
-import { WebPageSchema } from "@/components/seo/StructuredData"
-import { siteConfig } from "@/lib/seo-config"
-import { Bug, Check, AlertTriangle, Thermometer, Calendar } from "lucide-react"
+import type { Metadata } from "next";
+import Link from "next/link";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { WebPageSchema } from "@/components/seo/StructuredData";
+import { siteConfig } from "@/lib/seo-config";
+import { Bug, Check, AlertTriangle, Thermometer, Calendar } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Varroa-Monitoring – Erkennung, Behandlung und Vorbeugung",
-  description: "Alles über die Varroa-Milbe: Wie Sie einen Befall erkennen,正确的 Behandlung durchführen und vorbeugen.",
+  title: "Varroa-Monitoring und Behandlungs-Tipps",
+  description:
+    "Alles ueber die Varroa-Milbe: Wie Sie einen Befall erkennen, die richtige Behandlung durchfuehren und effektiv vorbeugen. Praxis-Tipps fuer Hobby-Imker.",
   alternates: {
     canonical: `${siteConfig.url}/wissen/varroa`,
   },
-}
+};
 
 export default function VarroaPage() {
   return (
@@ -21,10 +22,12 @@ export default function VarroaPage() {
         description="Alles über die Varroa-Milbe: Wie Sie einen Befall erkennen, Behandlung durchführen und vorbeugen."
         path="/wissen/varroa"
       />
-      <Breadcrumbs items={[
-        { name: "Wissen", href: "/wissen" },
-        { name: "Varroa-Monitoring", href: "/wissen/varroa" }
-      ]} />
+      <Breadcrumbs
+        items={[
+          { name: "Wissen", href: "/wissen" },
+          { name: "Varroa-Monitoring", href: "/wissen/varroa" },
+        ]}
+      />
 
       <section className="bg-gradient-to-b from-amber-50 via-orange-50 to-yellow-50 py-12 md:py-16">
         <div className="container mx-auto max-w-3xl px-4">
@@ -36,8 +39,8 @@ export default function VarroaPage() {
             Varroa-Monitoring
           </h1>
           <p className="mt-4 text-lg text-earth-600">
-            Die Varroa-Milbe ist der größte Feind unserer Honigbienen. Erfahren Sie,
-            wie Sie einen Befall erkennen und behandeln.
+            Die Varroa-Milbe ist der größte Feind unserer Honigbienen. Erfahren
+            Sie, wie Sie einen Befall erkennen und behandeln.
           </p>
         </div>
       </section>
@@ -47,24 +50,37 @@ export default function VarroaPage() {
           <div className="prose prose-stone prose-amber max-w-none">
             <h2>Was ist Varroa?</h2>
             <p>
-              Die Varroa destructor ist eine Milbe, die sich von
-              Bienenblut und Bienenpuppen ernährt. Sie gilt als eine der
-              größten Bedrohungen für die Honigbiene weltweit und kann
-              ganze Völker zum Zusammenbruch bringen.
+              Die Varroa destructor ist eine Milbe, die sich von Bienenblut und
+              Bienenpuppen ernährt. Sie gilt als eine der größten Bedrohungen
+              für die Honigbiene weltweit und kann ganze Völker zum
+              Zusammenbruch bringen.
             </p>
 
             <h2>Befall erkennen</h2>
             <p>Es gibt mehrere Methoden, einen Varroa-Befall festzustellen:</p>
             <ul>
-              <li><strong>Schüttelprobe:</strong> 300 Bienen in Spiritus schütteln, Milben zählen</li>
-              <li><strong>Windelprobe:</strong> Milben auf der Windel nach 3 Tagen zählen</li>
-              <li><strong>Befallene Brut:</strong> Verfärbte, schließende Brut cells with visible mites</li>
-              <li><strong>Stockwinden:</strong> Verfall des Volks im Spätsommer/Herbst</li>
+              <li>
+                <strong>Schüttelprobe:</strong> 300 Bienen in Spiritus
+                schütteln, Milben zählen
+              </li>
+              <li>
+                <strong>Windelprobe:</strong> Milben auf der Windel nach 3 Tagen
+                zählen
+              </li>
+              <li>
+                <strong>Befallene Brut:</strong> Verfaerbte, missgebildete Brut
+                mit sichtbaren Milben
+              </li>
+              <li>
+                <strong>Stockwinden:</strong> Verfall des Volks im
+                Spätsommer/Herbst
+              </li>
             </ul>
 
             <h2>Schadschwelle</h2>
             <p>
-              Die Schadschwelle liegt bei etwa <strong>3-5 Varroamilben pro Tag</strong>
+              Die Schadschwelle liegt bei etwa{" "}
+              <strong>3-5 Varroamilben pro Tag</strong>
               im Sommer (natürlicher Milbenfall). Bei Überschreitung sollte eine
               Behandlung erfolgen.
             </p>
@@ -72,10 +88,19 @@ export default function VarroaPage() {
             <h2>Behandlungsmethoden</h2>
             <p>Es gibt verschiedene zugelassene Behandlungsmethoden:</p>
             <ul>
-              <li><strong>Oxalsäure:</strong> Tropfen oder Sprühen im Winter, wenn keine Brut</li>
-              <li><strong>Ameisensäure:</strong> Verdunster, besonders im Sommer</li>
-              <li><strong>Thymol:</strong> Langzeitbehandlung,部分地区 zugelassen</li>
-              <li><strong>Wärmebehandlung:</strong> Brutwärmekammer, professionell</li>
+              <li>
+                <strong>Oxalsäure:</strong> Tropfen oder Sprühen im Winter, wenn
+                keine Brut
+              </li>
+              <li>
+                <strong>Ameisensäure:</strong> Verdunster, besonders im Sommer
+              </li>
+              <li>
+                <strong>Thymol:</strong> Langzeitbehandlung, regional zugelassen
+              </li>
+              <li>
+                <strong>Wärmebehandlung:</strong> Brutwärmekammer, professionell
+              </li>
             </ul>
 
             <h2>Vorbeugung</h2>
@@ -105,7 +130,9 @@ export default function VarroaPage() {
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <Check className="h-5 w-5 text-amber-500 mt-0.5" />
-                <span className="text-earth-700">Automatische Schadschwelle-Berechnung</span>
+                <span className="text-earth-700">
+                  Automatische Schadschwelle-Berechnung
+                </span>
               </li>
               <li className="flex items-start gap-3">
                 <Check className="h-5 w-5 text-amber-500 mt-0.5" />
@@ -141,19 +168,27 @@ export default function VarroaPage() {
               href="/wissen/bestandsbuch"
               className="rounded-lg border border-honey-100 p-4 hover:border-honey-200 hover:bg-honey-50 transition-colors"
             >
-              <div className="font-medium text-earth-800">Bestandsbuch-Pflicht</div>
-              <div className="text-sm text-earth-500 mt-1">Dokumentationspflichten für Imker</div>
+              <div className="font-medium text-earth-800">
+                Bestandsbuch-Pflicht
+              </div>
+              <div className="text-sm text-earth-500 mt-1">
+                Dokumentationspflichten für Imker
+              </div>
             </Link>
             <Link
-              href="/wissen/imker-kalender"
+              href="/wissen/honig-etiketten"
               className="rounded-lg border border-honey-100 p-4 hover:border-honey-200 hover:bg-honey-50 transition-colors"
             >
-              <div className="font-medium text-earth-800">Imker-Kalender</div>
-              <div className="text-sm text-earth-500 mt-1">Jahresplan für Imker</div>
+              <div className="font-medium text-earth-800">
+                Honig-Kennzeichnung
+              </div>
+              <div className="text-sm text-earth-500 mt-1">
+                Pflichtangaben auf dem Etikett
+              </div>
             </Link>
           </div>
         </div>
       </section>
     </>
-  )
+  );
 }

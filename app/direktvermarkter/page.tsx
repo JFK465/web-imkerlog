@@ -1,33 +1,37 @@
-import type { Metadata } from "next"
-import Link from "next/link"
-import { Breadcrumbs } from "@/components/layout/Breadcrumbs"
-import { WebPageSchema, FAQSchema } from "@/components/seo/StructuredData"
-import { siteConfig } from "@/lib/seo-config"
-import { Check, Tag, Package, Leaf, Euro, ShoppingCart } from "lucide-react"
+import type { Metadata } from "next";
+import Link from "next/link";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { WebPageSchema, FAQSchema } from "@/components/seo/StructuredData";
+import { siteConfig } from "@/lib/seo-config";
+import { Check, Tag, Package, Leaf, Euro, ShoppingCart } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Honig verkaufen – Software für Direktvermarkter – Imker-Logbuch Pro",
-  description: "Die perfekte Lösung für Imker, die Honig direkt vermarkten. Chargenverfolgung, Etikettengenerator und mehr.",
+  title: "Honig Direktvermarktung: Imker-Software",
+  description:
+    "Honig direkt vermarkten mit der richtigen Software: Chargenverfolgung, Etikettengenerator und Qualitaetssicherung fuer Imker. Jetzt kostenlos starten!",
   alternates: {
     canonical: `${siteConfig.url}/direktvermarkter`,
   },
   openGraph: {
-    title: "Honig verkaufen – Software für Direktvermarkter – Imker-Logbuch Pro",
-    description: "Die perfekte Lösung für Imker, die Honig direkt vermarkten.",
+    title: "Honig Direktvermarktung: Imker-Software | Imker-Logbuch Pro",
+    description:
+      "Honig direkt vermarkten mit der richtigen Software: Chargenverfolgung, Etikettengenerator und Qualitaetssicherung.",
     url: `${siteConfig.url}/direktvermarkter`,
   },
-}
+};
 
 const features = [
   {
     icon: Tag,
     title: "Chargenverfolgung",
-    description: "Jede Honigcharge ist zurückverfolgbar – vom Bienenstock bis zum Glas.",
+    description:
+      "Jede Honigcharge ist zurückverfolgbar – vom Bienenstock bis zum Glas.",
   },
   {
     icon: Package,
     title: "Etiketten-Generator",
-    description: "Erstellen Sie rechtskonforme Etiketten mit allen Pflichtangaben.",
+    description:
+      "Erstellen Sie rechtskonforme Etiketten mit allen Pflichtangaben.",
   },
   {
     icon: Leaf,
@@ -39,29 +43,32 @@ const features = [
     title: "Preiskalkulation",
     description: "Berechnen Sie Ihre Herstellungskosten und Margen.",
   },
-]
+];
 
 const benefits = [
   "Rechtskonforme Etiketten erstellen",
   "Volle Rückverfolgbarkeit der Chargen",
   "Export für Lebensmittelkontrollen",
   "Weniger Food Waste durch bessere Planung",
-]
+];
 
 const faqItems = [
   {
     question: "Welche Angaben müssen auf dem Honigetikett stehen?",
-    answer: "Netto-Füllmenge, Mindesthaltbarkeitsdatum, Name/Adresse, Ursprungsland, Chargennummer und gegebenenfalls玄en Sie weitere Angaben hinzu.",
+    answer:
+      "Netto-Fuellmenge, Mindesthaltbarkeitsdatum, Name und Adresse des Herstellers, Ursprungsland, Chargennummer und gegebenenfalls weitere Pflichtangaben.",
   },
   {
     question: "Kann ich meine Etiketten selbst drucken?",
-    answer: "Ja, Imker-Logbuch Pro erstellt druckfertige Etiketten, die Sie selbst ausdrucken oder in Druckerei geben können.",
+    answer:
+      "Ja, Imker-Logbuch Pro erstellt druckfertige Etiketten, die Sie selbst ausdrucken oder in Druckerei geben können.",
   },
   {
     question: "Wie lange muss ich die Chargen-Dokumentation aufbewahren?",
-    answer: "Für Honig gilt eine Aufbewahrungspflicht von mindestens 2 Jahren nach dem Verkauf.",
+    answer:
+      "Für Honig gilt eine Aufbewahrungspflicht von mindestens 2 Jahren nach dem Verkauf.",
   },
-]
+];
 
 export default function DirektvermarkterPage() {
   return (
@@ -72,7 +79,9 @@ export default function DirektvermarkterPage() {
         path="/direktvermarkter"
       />
       <FAQSchema items={faqItems} />
-      <Breadcrumbs items={[{ name: "Direktvermarkter", href: "/direktvermarkter" }]} />
+      <Breadcrumbs
+        items={[{ name: "Direktvermarkter", href: "/direktvermarkter" }]}
+      />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-amber-50 via-orange-50 to-yellow-50 py-16 md:py-20">
@@ -118,7 +127,9 @@ export default function DirektvermarkterPage() {
               <div className="relative rounded-2xl bg-gradient-to-br from-amber-200 to-orange-200 p-8">
                 <div className="rounded-xl bg-white p-6 shadow-lg">
                   <div className="text-center border-b border-honey-100 pb-4 mb-4">
-                    <div className="text-sm text-earth-500">Beispiel-Etikett</div>
+                    <div className="text-sm text-earth-500">
+                      Beispiel-Etikett
+                    </div>
                   </div>
                   <div className="border-2 border-amber-300 rounded-lg p-4">
                     <div className="text-center">
@@ -155,12 +166,19 @@ export default function DirektvermarkterPage() {
           </h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {features.map((feature, index) => (
-              <div key={index} className="rounded-xl border border-honey-100 bg-white p-6">
+              <div
+                key={index}
+                className="rounded-xl border border-honey-100 bg-white p-6"
+              >
                 <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-amber-100 mb-4">
                   <feature.icon className="h-6 w-6 text-amber-600" />
                 </div>
-                <h3 className="text-lg font-semibold text-earth-900">{feature.title}</h3>
-                <p className="mt-2 text-sm text-earth-600">{feature.description}</p>
+                <h3 className="text-lg font-semibold text-earth-900">
+                  {feature.title}
+                </h3>
+                <p className="mt-2 text-sm text-earth-600">
+                  {feature.description}
+                </p>
               </div>
             ))}
           </div>
@@ -175,25 +193,35 @@ export default function DirektvermarkterPage() {
           </h2>
           <div className="grid gap-4 md:grid-cols-2">
             <div className="bg-white rounded-xl p-6 shadow-sm">
-              <h3 className="font-semibold text-earth-900 mb-2">LMIV-Konform</h3>
+              <h3 className="font-semibold text-earth-900 mb-2">
+                LMIV-Konform
+              </h3>
               <p className="text-sm text-earth-600">
-                Alle Pflichtangaben für Honigetiketten werden automatisch generiert.
+                Alle Pflichtangaben für Honigetiketten werden automatisch
+                generiert.
               </p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm">
-              <h3 className="font-semibold text-earth-900 mb-2">Rückverfolgbarkeit</h3>
+              <h3 className="font-semibold text-earth-900 mb-2">
+                Rückverfolgbarkeit
+              </h3>
               <p className="text-sm text-earth-600">
-                Vollständige Dokumentation jeder Charge für Lebensmittelkontrollen.
+                Vollständige Dokumentation jeder Charge für
+                Lebensmittelkontrollen.
               </p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm">
-              <h3 className="font-semibold text-earth-900 mb-2">Export-Funktion</h3>
+              <h3 className="font-semibold text-earth-900 mb-2">
+                Export-Funktion
+              </h3>
               <p className="text-sm text-earth-600">
                 Alle Daten lassen sich für Behörden exportieren.
               </p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm">
-              <h3 className="font-semibold text-earth-900 mb-2">Archivierung</h3>
+              <h3 className="font-semibold text-earth-900 mb-2">
+                Archivierung
+              </h3>
               <p className="text-sm text-earth-600">
                 Automatische Aufbewahrung aller Dokumentationsdaten.
               </p>
@@ -209,7 +237,8 @@ export default function DirektvermarkterPage() {
             Starten Sie jetzt in die Direktvermarktung
           </h2>
           <p className="mt-4 text-earth-600">
-            Nutzen Sie die Beta-Phase kostenlos und optimieren Sie Ihren Honigverkauf.
+            Nutzen Sie die Beta-Phase kostenlos und optimieren Sie Ihren
+            Honigverkauf.
           </p>
           <Link
             href="/signup"
@@ -220,5 +249,5 @@ export default function DirektvermarkterPage() {
         </div>
       </section>
     </>
-  )
+  );
 }
