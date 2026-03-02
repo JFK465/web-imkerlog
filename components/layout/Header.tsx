@@ -1,77 +1,128 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { NAV_LINKS } from "@/lib/constants"
-import { Menu, X, ChevronDown, Hexagon, ExternalLink } from "lucide-react"
-import { useState, useRef, useEffect } from "react"
-import { AnimatePresence, motion } from "framer-motion"
+import Link from "next/link";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { NAV_LINKS } from "@/lib/constants";
+import { Menu, X, ChevronDown, ExternalLink } from "lucide-react";
+import { useState, useRef, useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 interface NavDropdown {
-  label: string
-  items: { name: string; href: string; description?: string }[]
+  label: string;
+  items: { name: string; href: string; description?: string }[];
 }
 
 const dropdowns: NavDropdown[] = [
   {
     label: "Produkt",
     items: [
-      { name: "Funktionen", href: "/funktionen", description: "Alle Features im Überblick" },
+      {
+        name: "Funktionen",
+        href: "/funktionen",
+        description: "Alle Features im Überblick",
+      },
       { name: "Preise", href: "/preise", description: "Kostenlos starten" },
-      { name: "Bienenverwaltung-Software", href: "/bienenverwaltung-software", description: "Dedizierte Landing Page" },
+      {
+        name: "Bienenverwaltung-Software",
+        href: "/bienenverwaltung-software",
+        description: "Dedizierte Landing Page",
+      },
     ],
   },
   {
     label: "Branchen",
     items: [
-      { name: "Hobby-Imker", href: "/hobby-imker", description: "Für private Imker" },
-      { name: "Direktvermarkter", href: "/direktvermarkter", description: "Honig verkaufen" },
-      { name: "Imkereien", href: "/imkereien", description: "Gewerbliche Imkerei" },
+      {
+        name: "Hobby-Imker",
+        href: "/hobby-imker",
+        description: "Für private Imker",
+      },
+      {
+        name: "Direktvermarkter",
+        href: "/direktvermarkter",
+        description: "Honig verkaufen",
+      },
+      {
+        name: "Imkereien",
+        href: "/imkereien",
+        description: "Gewerbliche Imkerei",
+      },
     ],
   },
   {
     label: "Wissen",
     items: [
-      { name: "Wissen & Ratgeber", href: "/wissen", description: "Alle Artikel" },
-      { name: "Bestandsbuch-Pflicht", href: "/wissen/bestandsbuch", description: "Rechtliche Anforderungen" },
-      { name: "Varroa-Monitoring", href: "/wissen/varroa", description: "Schädlingsbekämpfung" },
-      { name: "Honig-Etiketten", href: "/wissen/honig-etiketten", description: "Kennzeichnungspflicht" },
+      {
+        name: "Wissen & Ratgeber",
+        href: "/wissen",
+        description: "Alle Artikel",
+      },
+      {
+        name: "Bestandsbuch-Pflicht",
+        href: "/wissen/bestandsbuch",
+        description: "Rechtliche Anforderungen",
+      },
+      {
+        name: "Varroa-Monitoring",
+        href: "/wissen/varroa",
+        description: "Schädlingsbekämpfung",
+      },
+      {
+        name: "Honig-Etiketten",
+        href: "/wissen/honig-etiketten",
+        description: "Kennzeichnungspflicht",
+      },
       { name: "Blog", href: "/blog", description: "Aktuelle Artikel" },
     ],
   },
   {
     label: "Tools",
     items: [
-      { name: "Honig-Ernte-Rechner", href: "/tools/honig-rechner", description: "Ertrag berechnen" },
-      { name: "Varroa-Prognose", href: "/tools/varroa-prognose", description: "Befall einschätzen" },
+      {
+        name: "Honig-Ernte-Rechner",
+        href: "/tools/honig-rechner",
+        description: "Ertrag berechnen",
+      },
+      {
+        name: "Varroa-Prognose",
+        href: "/tools/varroa-prognose",
+        description: "Befall einschätzen",
+      },
     ],
   },
-]
+];
 
 function DropdownMenu({ dropdown }: { dropdown: NavDropdown }) {
-  const [open, setOpen] = useState(false)
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const [open, setOpen] = useState(false);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleEnter = () => {
-    if (timeoutRef.current) clearTimeout(timeoutRef.current)
-    setOpen(true)
-  }
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setOpen(true);
+  };
 
   const handleLeave = () => {
-    timeoutRef.current = setTimeout(() => setOpen(false), 150)
-  }
+    timeoutRef.current = setTimeout(() => setOpen(false), 150);
+  };
 
   useEffect(() => {
     return () => {
-      if (timeoutRef.current) clearTimeout(timeoutRef.current)
-    }
-  }, [])
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, []);
 
   return (
-    <div className="relative" onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
+    <div
+      className="relative"
+      onMouseEnter={handleEnter}
+      onMouseLeave={handleLeave}
+    >
       <button className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-earth-700 hover:text-honey-600 transition-colors">
         {dropdown.label}
-        <ChevronDown className={`h-4 w-4 transition-transform ${open ? "rotate-180" : ""}`} />
+        <ChevronDown
+          className={`h-4 w-4 transition-transform ${open ? "rotate-180" : ""}`}
+        />
       </button>
 
       {open && (
@@ -85,9 +136,13 @@ function DropdownMenu({ dropdown }: { dropdown: NavDropdown }) {
                   href={item.href}
                   className="block px-3 py-2.5 rounded-md text-sm hover:bg-honey-50 transition-colors"
                 >
-                  <span className="font-medium text-earth-800">{item.name}</span>
+                  <span className="font-medium text-earth-800">
+                    {item.name}
+                  </span>
                   {item.description && (
-                    <span className="block text-xs text-earth-500 mt-0.5">{item.description}</span>
+                    <span className="block text-xs text-earth-500 mt-0.5">
+                      {item.description}
+                    </span>
                   )}
                 </Link>
               ))}
@@ -96,21 +151,23 @@ function DropdownMenu({ dropdown }: { dropdown: NavDropdown }) {
         </>
       )}
     </div>
-  )
+  );
 }
 
 export function Header() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
-  const [mobileDropdownOpen, setMobileDropdownOpen] = useState<string | null>(null)
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState<string | null>(
+    null,
+  );
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 8)
-    }
-    window.addEventListener("scroll", handleScroll, { passive: true })
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      setScrolled(window.scrollY > 8);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <header
@@ -122,12 +179,15 @@ export function Header() {
     >
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center space-x-1">
-          <Hexagon className="h-8 w-8 text-amber-500" />
+          <Image
+            src="/logo.svg"
+            alt="BienenManager"
+            width={32}
+            height={32}
+            className="h-8 w-8"
+          />
           <span className="text-xl font-bold font-display text-earth-800">
-            Imker-Logbuch
-          </span>
-          <span className="text-xl font-bold font-display gradient-text">
-            Pro
+            BienenManager
           </span>
         </Link>
 
@@ -136,14 +196,21 @@ export function Header() {
           {dropdowns.map((dropdown) => (
             <DropdownMenu key={dropdown.label} dropdown={dropdown} />
           ))}
-          <Link href="/preise" className="px-3 py-2 text-sm font-medium text-earth-700 hover:text-honey-600 transition-colors">
+          <Link
+            href="/preise"
+            className="px-3 py-2 text-sm font-medium text-earth-700 hover:text-honey-600 transition-colors"
+          >
             Preise
           </Link>
         </nav>
 
         {/* Desktop CTA */}
         <div className="hidden lg:flex items-center gap-3">
-          <Button variant="ghost" asChild className="text-earth-700 hover:text-honey-600 hover:bg-honey-50">
+          <Button
+            variant="ghost"
+            asChild
+            className="text-earth-700 hover:text-honey-600 hover:bg-honey-50"
+          >
             <Link href="/demo">
               Demo
               <ExternalLink className="ml-2 h-3 w-3" />
@@ -184,10 +251,18 @@ export function Header() {
                 <div key={dropdown.label}>
                   <button
                     className="flex w-full items-center justify-between px-2 py-2 text-sm font-medium text-earth-700 hover:text-honey-600 transition-colors"
-                    onClick={() => setMobileDropdownOpen(mobileDropdownOpen === dropdown.label ? null : dropdown.label)}
+                    onClick={() =>
+                      setMobileDropdownOpen(
+                        mobileDropdownOpen === dropdown.label
+                          ? null
+                          : dropdown.label,
+                      )
+                    }
                   >
                     {dropdown.label}
-                    <ChevronDown className={`h-4 w-4 transition-transform ${mobileDropdownOpen === dropdown.label ? "rotate-180" : ""}`} />
+                    <ChevronDown
+                      className={`h-4 w-4 transition-transform ${mobileDropdownOpen === dropdown.label ? "rotate-180" : ""}`}
+                    />
                   </button>
                   <AnimatePresence>
                     {mobileDropdownOpen === dropdown.label && (
@@ -222,7 +297,11 @@ export function Header() {
               </Link>
 
               <div className="pt-2 flex flex-col gap-2">
-                <Button variant="outline" asChild className="w-full border-honey-300 text-earth-700 hover:bg-honey-50">
+                <Button
+                  variant="outline"
+                  asChild
+                  className="w-full border-honey-300 text-earth-700 hover:bg-honey-50"
+                >
                   <Link href="/demo" onClick={() => setIsOpen(false)}>
                     Demo ansehen
                   </Link>
@@ -241,5 +320,5 @@ export function Header() {
         )}
       </AnimatePresence>
     </header>
-  )
+  );
 }

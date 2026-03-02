@@ -32,16 +32,13 @@ export function Header() {
         <Link href="/" className="flex items-center space-x-2">
           <Image
             src="/logo.svg"
-            alt="Imker-Logbuch Pro Logo"
+            alt="BienenManager Logo"
             width={32}
             height={32}
             className="h-8 w-8"
           />
           <span className="text-xl font-bold font-display text-earth-800">
-            Imker-Logbuch
-          </span>
-          <span className="text-xl font-bold font-display gradient-text">
-            Pro
+            BienenManager
           </span>
         </Link>
 

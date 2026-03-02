@@ -1,13 +1,13 @@
 export interface FAQ {
-  question: string
-  answer: string
+  question: string;
+  answer: string;
 }
 
 export const faqData: FAQ[] = [
   {
     question: "Was bedeutet 'Beta'?",
     answer:
-      "Beta bedeutet, dass Imker-Logbuch Pro sich aktiv in Entwicklung befindet. Sie erhalten Zugang zu den bereits verfügbaren Funktionen und können das Produkt aktiv mitgestalten. Es kann noch Ecken und Kanten geben -- dafür ist Ihr Feedback umso wertvoller.",
+      "Beta bedeutet, dass BienenManager sich aktiv in Entwicklung befindet. Du erhältst Zugang zu den bereits verfügbaren Funktionen und kannst das Produkt aktiv mitgestalten. Es kann noch Ecken und Kanten geben -- dafür ist Dein Feedback umso wertvoller.",
   },
   {
     question: "Was kostet die Beta?",
@@ -34,4 +34,4 @@ export const faqData: FAQ[] = [
     answer:
       "Nutzen Sie unser Kontaktformular auf der Anmeldeseite oder schreiben Sie uns -- wir lesen und beantworten jede Nachricht persönlich.",
   },
-]
+];

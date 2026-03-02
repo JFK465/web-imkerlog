@@ -1,24 +1,24 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { CheckCircle2, Clock, Smartphone, Shield } from "lucide-react"
-import Link from "next/link"
-import { AnimatedSection } from "@/components/ui/animated-section"
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { CheckCircle2, Clock, Smartphone, Shield } from "lucide-react";
+import Link from "next/link";
+import { AnimatedSection } from "@/components/ui/animated-section";
 
 interface ValuePropositionProps {
-  produktName?: string
-  differenzierer?: string
-  konkretVorteile?: string[]
-  magicMoment?: string
-  ergebnisBild?: string
-  alternative?: string
-  zeitErsparnis?: string
-  uberschrift?: string
+  produktName?: string;
+  differenzierer?: string;
+  konkretVorteile?: string[];
+  magicMoment?: string;
+  ergebnisBild?: string;
+  alternative?: string;
+  zeitErsparnis?: string;
+  uberschrift?: string;
 }
 
 export function ValueProposition({
-  produktName = "Imker-Logbuch Pro",
+  produktName = "BienenManager",
   differenzierer = "Mobile-first mit Sprach- und Button-Eingabe für den Bienenstand",
   konkretVorteile = [
     "Automatisch rechtskonformes Bestandsbuch",
@@ -26,8 +26,7 @@ export function ValueProposition({
     "Wetterbasierte Varroa-Risikobewertung",
     "Chargenverfolgung für Honigverkauf",
   ],
-  magicMoment =
-    "Sie scannen den QR-Code am Stock, tippen kurz, und alles ist dokumentiert -- auch mit Bienenstichen an den Fingern.",
+  magicMoment = "Sie scannen den QR-Code am Stock, tippen kurz, und alles ist dokumentiert -- auch mit Bienenstichen an den Fingern.",
   alternative = "Papier, Excel und disparate Notizen",
   zeitErsparnis = "Deutlich weniger Aufwand",
   uberschrift = "Es geht auch anders.",
@@ -105,8 +104,12 @@ export function ValueProposition({
                       <Clock className="h-5 w-5 text-honey-600" />
                     </div>
                     <div>
-                      <p className="font-semibold text-earth-800">{zeitErsparnis}</p>
-                      <p className="text-xs text-earth-500">Weniger Verwaltung</p>
+                      <p className="font-semibold text-earth-800">
+                        {zeitErsparnis}
+                      </p>
+                      <p className="text-xs text-earth-500">
+                        Weniger Verwaltung
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4 p-3 bg-white rounded-xl shadow-sm">
@@ -114,8 +117,12 @@ export function ValueProposition({
                       <Smartphone className="h-5 w-5 text-honey-600" />
                     </div>
                     <div>
-                      <p className="font-semibold text-earth-800">30 Sekunden</p>
-                      <p className="text-xs text-earth-500">Pro Dokumentation</p>
+                      <p className="font-semibold text-earth-800">
+                        30 Sekunden
+                      </p>
+                      <p className="text-xs text-earth-500">
+                        Pro Dokumentation
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4 p-3 bg-white rounded-xl shadow-sm">
@@ -123,8 +130,12 @@ export function ValueProposition({
                       <Shield className="h-5 w-5 text-honey-600" />
                     </div>
                     <div>
-                      <p className="font-semibold text-earth-800">100% rechtskonform</p>
-                      <p className="text-xs text-earth-500">Nach EU-Verordnung</p>
+                      <p className="font-semibold text-earth-800">
+                        100% rechtskonform
+                      </p>
+                      <p className="text-xs text-earth-500">
+                        Nach EU-Verordnung
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -150,5 +161,5 @@ export function ValueProposition({
         </div>
       </div>
     </section>
-  )
+  );
 }

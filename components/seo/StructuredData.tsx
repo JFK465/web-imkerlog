@@ -57,7 +57,7 @@ export function SoftwareApplicationSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: "Imker-Logbuch Pro",
+    name: "BienenManager",
     applicationCategory: "BusinessApplication",
     operatingSystem: "Web",
     description: siteConfig.description,

@@ -21,7 +21,7 @@ interface HeroSectionProps {
 }
 
 export function HeroSection({
-  produktName = "Imker-Logbuch Pro",
+  produktName = "BienenManager",
   hauptVorteil = "Alles am Bienenstand im Griff -- vom Smartphone aus",
   primarerCTA = "Kostenlos Beta testen",
   features = [
@@ -32,7 +32,6 @@ export function HeroSection({
   ],
 }: HeroSectionProps) {
   const nameParts = produktName.split(" ");
-  const proIndex = nameParts.findIndex((w) => w === "Pro");
 
   return (
     <section className="relative py-20 md:py-32 overflow-hidden gradient-warm">
@@ -63,20 +62,15 @@ export function HeroSection({
               transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
             >
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight">
-                {proIndex >= 0 ? (
-                  <>
-                    {nameParts.slice(0, proIndex).join(" ")}{" "}
-                    <span className="gradient-text">{nameParts[proIndex]}</span>
-                    {nameParts.slice(proIndex + 1).length > 0 &&
-                      " " + nameParts.slice(proIndex + 1).join(" ")}
-                  </>
-                ) : (
+                {nameParts.length > 1 ? (
                   <>
                     {nameParts.slice(0, -1).join(" ")}{" "}
                     <span className="gradient-text">
                       {nameParts[nameParts.length - 1]}
                     </span>
                   </>
+                ) : (
+                  <span className="gradient-text">{nameParts[0]}</span>
                 )}
               </h1>
             </motion.div>
@@ -152,7 +146,7 @@ export function HeroSection({
             <div className="relative w-full max-w-lg">
               <Image
                 src="/images/hero.png"
-                alt="Imker-Logbuch Pro — Bienenverwaltung am Laptop mit Dashboard"
+                alt="BienenManager — Bienenverwaltung am Laptop mit Dashboard"
                 width={800}
                 height={450}
                 className="rounded-2xl shadow-warm-lg"

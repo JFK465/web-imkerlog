@@ -1,12 +1,12 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config: Config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
   theme: {
     container: {
@@ -94,9 +94,13 @@ const config: Config = {
         body: ["var(--font-body)", "system-ui", "sans-serif"],
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        lg: "var(--radius-card)",
+        md: "var(--radius-input)",
+        sm: "var(--radius-badge)",
+        button: "var(--radius-button)",
+        input: "var(--radius-input)",
+        card: "var(--radius-card)",
+        badge: "var(--radius-badge)",
       },
       boxShadow: {
         warm: "0 4px 14px 0 rgba(245, 158, 11, 0.1)",
@@ -136,5 +140,5 @@ const config: Config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
-export default config
+};
+export default config;

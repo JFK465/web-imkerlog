@@ -66,7 +66,7 @@ const defaultFeatures: Feature[] = [
 ];
 
 export function FeaturesSection({
-  uberschrift = "Was Imker-Logbuch Pro für Sie tut",
+  uberschrift = "Was BienenManager für Sie tut",
   unteruberschrift = "Funktionen, die Ihren Alltag verändern",
   features = defaultFeatures,
   kundenZitat = "",

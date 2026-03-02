@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { DM_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/marketing/Footer";
@@ -9,26 +9,27 @@ import {
   SoftwareApplicationSchema,
 } from "@/components/seo/StructuredData";
 
-const inter = Inter({
+const dmSans = DM_Sans({
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap",
 });
 
-const playfair = Playfair_Display({
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://imker-logbuch-pro.de"),
+  metadataBase: new URL("https://bienen-manager.de"),
   title: {
-    default: "Imker-Logbuch Pro – Bienenverwaltung Software fuer Imker",
-    template: "%s | Imker-Logbuch Pro",
+    default:
+      "BienenManager – Dein digitales Imker-Logbuch für erfolgreiche Bienenzucht",
+    template: "%s | BienenManager",
   },
   description:
-    "Die Bienenverwaltung Software fuer Hobby-Imker und Direktvermarkter. QR-Codes, rechtskonformes Bestandsbuch, Varroa-Prognose. Jetzt kostenlos testen!",
+    "Dein digitales Imker-Logbuch für erfolgreiche Bienenzucht. QR-Codes am Bienenstock, rechtskonformes Bestandsbuch, Varroa-Prognose. Jetzt kostenlos testen!",
   keywords: [
     "Bienenverwaltung Software",
     "Imker App",
@@ -37,32 +38,32 @@ export const metadata: Metadata = {
     "Varroa Kontrolle",
     "Imkerei Digitalisierung",
   ],
-  authors: [{ name: "Imker-Logbuch Pro Team" }],
-  creator: "Imker-Logbuch Pro",
+  authors: [{ name: "BienenManager Team" }],
+  creator: "BienenManager",
   openGraph: {
     type: "website",
     locale: "de_DE",
-    url: "https://imker-logbuch-pro.de",
+    url: "https://bienen-manager.de",
     title:
-      "Imker-Logbuch Pro: Bienenverwaltung Software - Jetzt kostenlos testen",
+      "BienenManager: Dein digitales Imker-Logbuch - Jetzt kostenlos testen",
     description:
-      "Die Bienenverwaltung Software fuer Hobby-Imker und Direktvermarkter. QR-Codes, rechtskonformes Bestandsbuch, Varroa-Prognose. Jetzt kostenlos testen!",
-    siteName: "Imker-Logbuch Pro",
+      "Dein digitales Imker-Logbuch für erfolgreiche Bienenzucht. QR-Codes am Bienenstock, rechtskonformes Bestandsbuch, Varroa-Prognose. Jetzt kostenlos testen!",
+    siteName: "BienenManager",
     images: [
       {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "Imker-Logbuch Pro - Bienenverwaltung Software",
+        alt: "BienenManager - Dein digitales Imker-Logbuch",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "Imker-Logbuch Pro: Bienenverwaltung Software - Jetzt kostenlos testen",
+      "BienenManager: Dein digitales Imker-Logbuch - Jetzt kostenlos testen",
     description:
-      "Die Bienenverwaltung Software fuer Hobby-Imker und Direktvermarkter. QR-Codes, rechtskonformes Bestandsbuch, Varroa-Prognose.",
+      "Dein digitales Imker-Logbuch für erfolgreiche Bienenzucht. QR-Codes am Bienenstock, rechtskonformes Bestandsbuch, Varroa-Prognose.",
     images: ["/og.png"],
   },
   alternates: {
@@ -87,7 +88,7 @@ export default function RootLayout({
         <SoftwareApplicationSchema />
       </head>
       <body
-        className={`${inter.variable} ${playfair.variable} ${inter.className}`}
+        className={`${dmSans.variable} ${jetbrainsMono.variable} ${dmSans.className}`}
       >
         <div className="min-h-screen flex flex-col">
           <Header />

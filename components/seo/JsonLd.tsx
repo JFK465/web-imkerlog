@@ -1,5 +1,5 @@
 interface JsonLdProps {
-  data: Record<string, unknown>
+  data: Record<string, unknown>;
 }
 
 export function JsonLd({ data }: JsonLdProps) {
@@ -8,7 +8,7 @@ export function JsonLd({ data }: JsonLdProps) {
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
     />
-  )
+  );
 }
 
 export function OrganizationSchema({
@@ -17,10 +17,10 @@ export function OrganizationSchema({
   logo,
   sameAs = [],
 }: {
-  name: string
-  url: string
-  logo?: string
-  sameAs?: string[]
+  name: string;
+  url: string;
+  logo?: string;
+  sameAs?: string[];
 }) {
   const schema = {
     "@context": "https://schema.org",
@@ -29,9 +29,9 @@ export function OrganizationSchema({
     url,
     logo,
     sameAs,
-  }
+  };
 
-  return <JsonLd data={schema} />
+  return <JsonLd data={schema} />;
 }
 
 export function BetaSoftwareSchema({
@@ -40,10 +40,10 @@ export function BetaSoftwareSchema({
   url,
   betaStartDate,
 }: {
-  name: string
-  description: string
-  url: string
-  betaStartDate?: string
+  name: string;
+  description: string;
+  url: string;
+  betaStartDate?: string;
 }) {
   const schema = {
     "@context": "https://schema.org",
@@ -61,12 +61,16 @@ export function BetaSoftwareSchema({
       ...(betaStartDate && { validFrom: betaStartDate }),
       description: "Kostenloser Beta-Zugang",
     },
-  }
+  };
 
-  return <JsonLd data={schema} />
+  return <JsonLd data={schema} />;
 }
 
-export function FAQSchema({ faqs }: { faqs: { question: string; answer: string }[] }) {
+export function FAQSchema({
+  faqs,
+}: {
+  faqs: { question: string; answer: string }[];
+}) {
   const schema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -78,9 +82,9 @@ export function FAQSchema({ faqs }: { faqs: { question: string; answer: string }
         text: faq.answer,
       },
     })),
-  }
+  };
 
-  return <JsonLd data={schema} />
+  return <JsonLd data={schema} />;
 }
 
 export function ArticleSchema({
@@ -92,13 +96,13 @@ export function ArticleSchema({
   url,
   image,
 }: {
-  headline: string
-  datePublished: string
-  dateModified?: string
-  author: string
-  description: string
-  url: string
-  image?: string
+  headline: string;
+  datePublished: string;
+  dateModified?: string;
+  author: string;
+  description: string;
+  url: string;
+  image?: string;
 }) {
   const schema = {
     "@context": "https://schema.org",
@@ -115,15 +119,19 @@ export function ArticleSchema({
     ...(image && { image }),
     publisher: {
       "@type": "Organization",
-      name: "Imker-Logbuch Pro",
-      url: "https://imker-logbuch-pro.de",
+      name: "BienenManager",
+      url: "https://bienen-manager.de",
     },
-  }
+  };
 
-  return <JsonLd data={schema} />
+  return <JsonLd data={schema} />;
 }
 
-export function BreadcrumbSchema({ items }: { items: { name: string; url: string }[] }) {
+export function BreadcrumbSchema({
+  items,
+}: {
+  items: { name: string; url: string }[];
+}) {
   const schema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -133,9 +141,9 @@ export function BreadcrumbSchema({ items }: { items: { name: string; url: string
       name: item.name,
       item: item.url,
     })),
-  }
+  };
 
-  return <JsonLd data={schema} />
+  return <JsonLd data={schema} />;
 }
 
 export function HowToSchema({
@@ -143,9 +151,9 @@ export function HowToSchema({
   description,
   steps,
 }: {
-  name: string
-  description: string
-  steps: { name: string; text: string }[]
+  name: string;
+  description: string;
+  steps: { name: string; text: string }[];
 }) {
   const schema = {
     "@context": "https://schema.org",
@@ -158,7 +166,7 @@ export function HowToSchema({
       name: step.name,
       text: step.text,
     })),
-  }
+  };
 
-  return <JsonLd data={schema} />
+  return <JsonLd data={schema} />;
 }

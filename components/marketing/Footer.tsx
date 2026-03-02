@@ -25,20 +25,17 @@ export function Footer() {
             <div className="flex items-center space-x-2">
               <Image
                 src="/logo-dark.svg"
-                alt="Imker-Logbuch Pro Logo"
+                alt="BienenManager Logo"
                 width={32}
                 height={32}
                 className="h-8 w-8"
               />
               <span className="text-2xl font-bold font-display text-honey-400">
-                Imker-Logbuch
-              </span>
-              <span className="text-2xl font-bold font-display text-honey-300">
-                Pro
+                BienenManager
               </span>
             </div>
             <p className="text-sm text-earth-200 leading-relaxed">
-              Smarte Verwaltung für Hobby-Imker und Direktvermarkter.
+              Dein digitales Imker-Logbuch für erfolgreiche Bienenzucht.
               Rechtskonform, mobil, einfach.
             </p>
           </div>
@@ -131,7 +128,7 @@ export function Footer() {
         <div className="mt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <p className="text-sm text-earth-400">
-              &copy; {new Date().getFullYear()} Imker-Logbuch Pro. Alle Rechte
+              &copy; {new Date().getFullYear()} BienenManager. Alle Rechte
               vorbehalten.
             </p>
             <span className="inline-flex items-center gap-1.5 rounded-full border border-earth-600 px-3 py-0.5 text-xs text-earth-300">

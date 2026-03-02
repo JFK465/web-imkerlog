@@ -4,48 +4,69 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 38 92% 50%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 38 92% 50%;
-    --radius: 0.5rem;
+    --background: oklch(0.985 0.002 38);
+    --foreground: oklch(0.147 0.015 38);
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.147 0.015 38);
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.147 0.015 38);
+    --primary: oklch(0.65 0.18 38);
+    --primary-foreground: oklch(1 0 0);
+    --secondary: oklch(0.92 0.04 38);
+    --secondary-foreground: oklch(0.147 0.015 38);
+    --muted: oklch(0.92 0.04 38);
+    --muted-foreground: oklch(0.556 0.016 38);
+    --accent: oklch(0.65 0.18 133);
+    --accent-foreground: oklch(1 0 0);
+    --destructive: oklch(0.577 0.245 25);
+    --destructive-foreground: oklch(1 0 0);
+    --border: oklch(0.92 0.04 38);
+    --input: oklch(0.92 0.04 38);
+    --ring: oklch(0.65 0.18 38);
+    /* Soft & Friendly Design Token */
+    --radius-card: 1rem;
+    --radius-button: 9999px;
+    --radius-input: 0.75rem;
+    --radius-badge: 9999px;
+    /* Chart colors */
+    --chart-1: oklch(0.65 0.18 38);
+    --chart-2: oklch(0.65 0.18 133);
+    --chart-3: oklch(0.65 0.18 200);
+    --chart-4: oklch(0.65 0.18 280);
+    --chart-5: oklch(0.65 0.18 160);
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 38 92% 50%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 38 92% 50%;
+    --background: oklch(0.147 0.015 38);
+    --foreground: oklch(0.985 0.002 38);
+    --card: oklch(0.205 0.015 38);
+    --card-foreground: oklch(0.985 0.002 38);
+    --popover: oklch(0.205 0.015 38);
+    --popover-foreground: oklch(0.985 0.002 38);
+    --primary: oklch(0.65 0.18 38);
+    --primary-foreground: oklch(0.147 0.015 38);
+    --secondary: oklch(0.269 0.015 38);
+    --secondary-foreground: oklch(0.985 0.002 38);
+    --muted: oklch(0.269 0.015 38);
+    --muted-foreground: oklch(0.7 0.02 38);
+    --accent: oklch(0.65 0.18 133);
+    --accent-foreground: oklch(0.147 0.015 38);
+    --destructive: oklch(0.396 0.141 25);
+    --destructive-foreground: oklch(0.985 0.002 38);
+    --border: oklch(0.269 0.015 38);
+    --input: oklch(0.269 0.015 38);
+    --ring: oklch(0.65 0.18 38);
+    /* Soft & Friendly Design Token */
+    --radius-card: 1rem;
+    --radius-button: 9999px;
+    --radius-input: 0.75rem;
+    --radius-badge: 9999px;
+    /* Chart colors */
+    --chart-1: oklch(0.65 0.18 38);
+    --chart-2: oklch(0.65 0.18 133);
+    --chart-3: oklch(0.65 0.18 200);
+    --chart-4: oklch(0.65 0.18 280);
+    --chart-5: oklch(0.65 0.18 160);
   }
 }
 

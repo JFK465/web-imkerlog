@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { QrCode, CheckCircle2 } from "lucide-react"
+import { motion } from "framer-motion";
+import { QrCode, CheckCircle2 } from "lucide-react";
 
 export function PhoneMockup() {
   return (
@@ -20,7 +20,7 @@ export function PhoneMockup() {
           {/* Status Bar */}
           <div className="h-8 bg-honey-50 flex items-center justify-center">
             <span className="text-[10px] font-medium text-earth-500">
-              Imker-Logbuch Pro
+              BienenManager
             </span>
           </div>
 
@@ -62,5 +62,5 @@ export function PhoneMockup() {
         </div>
       </div>
     </motion.div>
-  )
+  );
 }
