@@ -14,3 +14,7 @@ out/
 # build info
 next-env.d.ts
 tsconfig.tsbuildinfo
+
+# generated assets
+package-lock.json
+scripts/
