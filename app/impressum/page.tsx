@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "Impressum",
   description:
     "Impressum von Imker-Logbuch Pro – Angaben gemaess § 5 DDG, Kontaktinformationen, verantwortliche Person und rechtliche Hinweise zur Bienenverwaltung-Software.",
-  robots: { index: true, follow: true },
+  robots: { index: false, follow: true },
 };
 
 export default function ImpressumPage() {
@@ -30,9 +30,7 @@ export default function ImpressumPage() {
           <h2>Kontakt</h2>
           <p>
             E-Mail:{" "}
-            <a href="mailto:info@imker-logbuch-pro.de">
-              info@imker-logbuch-pro.de
-            </a>
+            <a href="mailto:info@bienen-manager.de">info@bienen-manager.de</a>
           </p>
 
           <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>

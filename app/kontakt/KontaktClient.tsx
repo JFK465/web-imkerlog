@@ -72,10 +72,10 @@ export function KontaktClient() {
                   <div>
                     <h3 className="font-medium text-earth-900">E-Mail</h3>
                     <a
-                      href="mailto:kontakt@imker-logbuch-pro.de"
+                      href="mailto:kontakt@bienen-manager.de"
                       className="mt-1 block text-sm text-earth-600 hover:text-amber-600"
                     >
-                      kontakt@imker-logbuch-pro.de
+                      kontakt@bienen-manager.de
                     </a>
                   </div>
                 </div>

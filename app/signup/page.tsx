@@ -1,28 +1,28 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { useRouter } from "next/navigation"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { CheckCircle2, ArrowRight, ArrowLeft, Loader2 } from "lucide-react"
-import Link from "next/link"
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { CheckCircle2, ArrowRight, ArrowLeft, Loader2 } from "lucide-react";
+import Link from "next/link";
 
 interface FormData {
-  name: string
-  email: string
-  rolle: string
-  imkereiName: string
-  bienenstoecke: string
-  newsletter: boolean
-  datenschutz: boolean
+  name: string;
+  email: string;
+  rolle: string;
+  imkereiName: string;
+  bienenstoecke: string;
+  newsletter: boolean;
+  datenschutz: boolean;
 }
 
 export default function SignupPage() {
-  const router = useRouter()
-  const [step, setStep] = useState(1)
-  const [isLoading, setIsLoading] = useState(false)
+  const router = useRouter();
+  const [step, setStep] = useState(1);
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -31,36 +31,35 @@ export default function SignupPage() {
     bienenstoecke: "",
     newsletter: true,
     datenschutz: false,
-  })
+  });
 
   const updateFormData = (field: keyof FormData, value: string | boolean) => {
-    setFormData((prev) => ({ ...prev, [field]: value }))
-  }
+    setFormData((prev) => ({ ...prev, [field]: value }));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     if (!formData.datenschutz) {
-      alert("Bitte stimmen Sie der Datenschutzerklärung zu.")
-      return
+      alert("Bitte stimmen Sie der Datenschutzerklärung zu.");
+      return;
     }
 
-    setIsLoading(true)
+    setIsLoading(true);
 
     // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    await new Promise((resolve) => setTimeout(resolve, 1500));
 
     // In production, send to actual API
-    console.log("Signup data:", formData)
 
-    setIsLoading(false)
-    setStep(4) // Success step
-  }
+    setIsLoading(false);
+    setStep(4); // Success step
+  };
 
   const steps = [
     { number: 1, title: "Kontakt" },
     { number: 2, title: "Über Sie" },
     { number: 3, title: "Bestätigen" },
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-background py-12 md:py-24">
@@ -149,7 +148,9 @@ export default function SignupPage() {
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="imkereiName">Name Ihrer Imkerei (optional)</Label>
+                <Label htmlFor="imkereiName">
+                  Name Ihrer Imkerei (optional)
+                </Label>
                 <Input
                   id="imkereiName"
                   placeholder="z.B. Honig von der Wiese"
@@ -307,5 +308,5 @@ export default function SignupPage() {
         )}
       </div>
     </div>
-  )
+  );
 }

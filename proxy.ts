@@ -1,7 +1,7 @@
-import { NextResponse } from "next/server"
-import type { NextRequest } from "next/server"
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
 
-const APP_DOMAIN = "https://app.imker-logbuch-pro.de"
+const APP_DOMAIN = "https://app.bienen-manager.de";
 
 const APP_ROUTE_PREFIXES = [
   "/dashboard",
@@ -10,20 +10,20 @@ const APP_ROUTE_PREFIXES = [
   "/settings",
   "/reports",
   "/projects",
-]
+];
 
 export function proxy(request: NextRequest) {
-  const { pathname } = request.nextUrl
+  const { pathname } = request.nextUrl;
 
   for (const prefix of APP_ROUTE_PREFIXES) {
     if (pathname === prefix || pathname.startsWith(prefix + "/")) {
-      const redirectUrl = new URL(pathname, APP_DOMAIN)
-      redirectUrl.search = request.nextUrl.search
-      return NextResponse.redirect(redirectUrl, { status: 308 })
+      const redirectUrl = new URL(pathname, APP_DOMAIN);
+      redirectUrl.search = request.nextUrl.search;
+      return NextResponse.redirect(redirectUrl, { status: 308 });
     }
   }
 
-  return NextResponse.next()
+  return NextResponse.next();
 }
 
 export const config = {
@@ -35,4 +35,4 @@ export const config = {
     "/reports/:path*",
     "/projects/:path*",
   ],
-}
+};

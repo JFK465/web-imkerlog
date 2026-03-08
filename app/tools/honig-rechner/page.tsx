@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/seo-config";
+import { WebPageSchema } from "@/components/seo/StructuredData";
 import { HonigRechnerClient } from "./HonigRechnerClient";
 
 export const metadata: Metadata = {
@@ -12,5 +13,14 @@ export const metadata: Metadata = {
 };
 
 export default function HonigRechnerPage() {
-  return <HonigRechnerClient />;
+  return (
+    <>
+      <WebPageSchema
+        title="Honig-Ernte-Rechner: Ertrag berechnen"
+        description="Berechnen Sie Ihren voraussichtlichen Honig-Ertrag basierend auf Voelkerzahl, Standort und Saison."
+        path="/tools/honig-rechner"
+      />
+      <HonigRechnerClient />
+    </>
+  );
 }

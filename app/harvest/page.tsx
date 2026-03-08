@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
+import { WebPageSchema } from "@/components/seo/StructuredData";
 
 const LabelGenerator = dynamic(
   () =>
@@ -19,6 +20,11 @@ export const metadata: Metadata = {
 export default function HarvestPage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-amber-50 to-orange-50 py-20">
+      <WebPageSchema
+        title="Honig-Ernte dokumentieren und Etiketten erstellen"
+        description="Dokumentieren Sie Ihre Honig-Ernte digital und generieren Sie professionelle Etiketten fuer Ihre Glaeser."
+        path="/harvest"
+      />
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-earth-800 mb-4">

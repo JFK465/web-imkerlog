@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Allgemeine Geschaeftsbedingungen (AGB)",
   description:
     "Allgemeine Geschaeftsbedingungen (AGB) von Imker-Logbuch Pro. Informationen zu Vertragsbedingungen, Nutzungsrechten, Datenschutz und Haftung fuer die Software.",
+  robots: { index: false, follow: true },
   alternates: {
     canonical: `${siteConfig.url}/agb`,
   },
@@ -122,7 +123,7 @@ export default function AGBPage() {
               <br />
               <strong>Imker-Logbuch Pro</strong>
               <br />
-              E-Mail: kontakt@imker-logbuch-pro.de
+              E-Mail: kontakt@bienen-manager.de
             </p>
           </div>
         </div>

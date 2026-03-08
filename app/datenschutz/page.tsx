@@ -4,6 +4,7 @@ export const metadata = {
   title: "Datenschutz",
   description:
     "Datenschutzerklaerung von Imker-Logbuch Pro. Informationen zur Datenerfassung, Ihren Rechten und dem Umgang mit personenbezogenen Daten auf unserer Website.",
+  robots: { index: false, follow: true },
 };
 
 export default function DatenschutzPage() {

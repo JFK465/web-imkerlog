@@ -117,26 +117,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     ...blogUrls,
 
-    // Legal
-    {
-      url: `${baseUrl}/impressum`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/datenschutz`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/agb`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-
     // App Pages
     {
       url: `${baseUrl}/signup`,

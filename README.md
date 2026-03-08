@@ -36,7 +36,7 @@ npm run dev
 2. Environment Variables setzen:
    - `NEXT_PUBLIC_PRODUCT_NAME=Imker-Logbuch Pro`
    - `NEXT_PUBLIC_PRODUCT_TAGLINE=Smarte Verwaltung für Hobby-Imker & Direktvermarkter`
-   - `NEXT_PUBLIC_SITE_URL=https://imker-logbuch-pro.de`
+   - `NEXT_PUBLIC_SITE_URL=https://bienen-manager.de`
    - `NEXT_PUBLIC_COMPANY_NAME=Imker-Logbuch Pro`
 
 3. Deploy
@@ -62,5 +62,5 @@ MIT
 
 ## Kontakt
 
-E-Mail: kontakt@imker-logbuch-pro.de
-Web: https://imker-logbuch-pro.de
+E-Mail: kontakt@bienen-manager.de
+Web: https://bienen-manager.de
