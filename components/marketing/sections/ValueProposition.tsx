@@ -32,7 +32,7 @@ export function ValueProposition({
   uberschrift = "Es geht auch anders.",
 }: ValuePropositionProps) {
   return (
-    <section id="loesung" className="py-16 md:py-24">
+    <section id="lösung" className="py-16 md:py-24">
       <div className="container px-4 md:px-6">
         <div className="max-w-5xl mx-auto">
           {/* Section Header */}

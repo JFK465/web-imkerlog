@@ -8,16 +8,16 @@ import { siteConfig } from "@/lib/seo-config";
 import { faqData } from "@/lib/faq-data";
 
 export const metadata: Metadata = {
-  title: "Faire Preise fuer Imker-Software",
+  title: "Faire Preise für Imker-Software",
   description:
-    "Transparente Preise fuer Imker-Logbuch Pro. Kostenlos starten in der Beta-Phase, alle Funktionen inklusive. Faire Tarife fuer Hobby-Imker und Imkereien.",
+    "Transparente Preise für Imker-Logbuch Pro. Kostenlos starten in der Beta-Phase, alle Funktionen inklusive. Faire Tarife für Hobby-Imker und Imkereien.",
   alternates: {
     canonical: `${siteConfig.url}/preise`,
   },
   openGraph: {
-    title: "Faire Preise fuer Imker-Software | Imker-Logbuch Pro",
+    title: "Faire Preise für Imker-Software | Imker-Logbuch Pro",
     description:
-      "Transparente Preise fuer Imker-Logbuch Pro. Kostenlos starten in der Beta-Phase, alle Funktionen inklusive.",
+      "Transparente Preise für Imker-Logbuch Pro. Kostenlos starten in der Beta-Phase, alle Funktionen inklusive.",
     url: `${siteConfig.url}/preise`,
     type: "website",
     locale: "de_DE",
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Faire Preise fuer Imker-Software | Imker-Logbuch Pro",
+    title: "Faire Preise für Imker-Software | Imker-Logbuch Pro",
     description:
-      "Transparente Preise fuer Imker-Logbuch Pro. Kostenlos starten in der Beta-Phase, alle Funktionen inklusive.",
+      "Transparente Preise für Imker-Logbuch Pro. Kostenlos starten in der Beta-Phase, alle Funktionen inklusive.",
   },
 };
 

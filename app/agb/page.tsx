@@ -6,7 +6,7 @@ import { siteConfig } from "@/lib/seo-config";
 export const metadata: Metadata = {
   title: "Allgemeine Geschaeftsbedingungen (AGB)",
   description:
-    "Allgemeine Geschaeftsbedingungen (AGB) von Imker-Logbuch Pro. Informationen zu Vertragsbedingungen, Nutzungsrechten, Datenschutz und Haftung fuer die Software.",
+    "Allgemeine Geschaeftsbedingungen (AGB) von Imker-Logbuch Pro. Informationen zu Vertragsbedingungen, Nutzungsrechten, Datenschutz und Haftung für die Software.",
   robots: { index: false, follow: true },
   alternates: {
     canonical: `${siteConfig.url}/agb`,

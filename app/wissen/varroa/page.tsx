@@ -8,7 +8,7 @@ import { Bug, Check, AlertTriangle, Thermometer, Calendar } from "lucide-react";
 export const metadata: Metadata = {
   title: "Varroa-Monitoring und Behandlungs-Tipps",
   description:
-    "Alles ueber die Varroa-Milbe: Wie Sie einen Befall erkennen, die richtige Behandlung durchfuehren und effektiv vorbeugen. Praxis-Tipps fuer Hobby-Imker.",
+    "Alles ueber die Varroa-Milbe: Wie Sie einen Befall erkennen, die richtige Behandlung durchführen und effektiv vorbeugen. Praxis-Tipps für Hobby-Imker.",
   alternates: {
     canonical: `${siteConfig.url}/wissen/varroa`,
   },

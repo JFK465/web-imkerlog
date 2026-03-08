@@ -13,16 +13,16 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Software fuer gewerbliche Imkereien",
+  title: "Software für gewerbliche Imkereien",
   description:
-    "Professionelle Imkerei-Software fuer gewerbliche Betriebe: Mehrbenutzer-Zugang, API-Schnittstelle, individuelle Berichte und dedizierter Support inklusive.",
+    "Professionelle Imkerei-Software für gewerbliche Betriebe: Mehrbenutzer-Zugang, API-Schnittstelle, individuelle Berichte und dedizierter Support inklusive.",
   alternates: {
     canonical: `${siteConfig.url}/imkereien`,
   },
   openGraph: {
-    title: "Software fuer gewerbliche Imkereien | Imker-Logbuch Pro",
+    title: "Software für gewerbliche Imkereien | Imker-Logbuch Pro",
     description:
-      "Professionelle Imkerei-Software fuer gewerbliche Betriebe: Mehrbenutzer-Zugang, API-Schnittstelle und individuelle Berichte.",
+      "Professionelle Imkerei-Software für gewerbliche Betriebe: Mehrbenutzer-Zugang, API-Schnittstelle und individuelle Berichte.",
     url: `${siteConfig.url}/imkereien`,
   },
 };
@@ -83,8 +83,8 @@ export default function ImkereienPage() {
   return (
     <>
       <WebPageSchema
-        title="Software fuer gewerbliche Imkereien | Imker-Logbuch Pro"
-        description="Professionelle Imkerei-Software fuer gewerbliche Betriebe mit Mehrbenutzer-Zugang und API."
+        title="Software für gewerbliche Imkereien | Imker-Logbuch Pro"
+        description="Professionelle Imkerei-Software für gewerbliche Betriebe mit Mehrbenutzer-Zugang und API."
         path="/imkereien"
       />
       <FAQSchema items={faqItems} />
@@ -140,7 +140,7 @@ export default function ImkereienPage() {
                     </span>
                   </div>
                   <p className="text-xs text-earth-500 mb-4">
-                    So koennen Ihre Statistiken aussehen
+                    So können Ihre Statistiken aussehen
                   </p>
                   <div className="space-y-4">
                     <div>

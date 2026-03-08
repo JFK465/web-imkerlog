@@ -6,16 +6,16 @@ import { siteConfig } from "@/lib/seo-config";
 import { Check, QrCode, FileText, Bug, Calendar, Heart } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Imker-Software fuer Hobby-Imker",
+  title: "Imker-Software für Hobby-Imker",
   description:
-    "Die perfekte Imker-Software fuer Hobby-Imker: Einfache Dokumentation am Bienenstand, rechtlich konformes Bestandsbuch und mobile Nutzung. Jetzt testen!",
+    "Die perfekte Imker-Software für Hobby-Imker: Einfache Dokumentation am Bienenstand, rechtlich konformes Bestandsbuch und mobile Nutzung. Jetzt testen!",
   alternates: {
     canonical: `${siteConfig.url}/hobby-imker`,
   },
   openGraph: {
-    title: "Imker-Software fuer Hobby-Imker | Imker-Logbuch Pro",
+    title: "Imker-Software für Hobby-Imker | Imker-Logbuch Pro",
     description:
-      "Die perfekte Imker-Software fuer Hobby-Imker: Einfache Dokumentation am Bienenstand, rechtlich konformes Bestandsbuch.",
+      "Die perfekte Imker-Software für Hobby-Imker: Einfache Dokumentation am Bienenstand, rechtlich konformes Bestandsbuch.",
     url: `${siteConfig.url}/hobby-imker`,
   },
 };

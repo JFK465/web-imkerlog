@@ -7,14 +7,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Imkerei-Blog: Tipps fuer Hobby-Imker",
+  title: "Imkerei-Blog: Tipps für Hobby-Imker",
   description:
-    "Praxis-Tipps fuer Hobby-Imker im Imkerei-Blog: Varroa-Behandlung, Honig-Ernte, Bestandsbuch-Fuehrung und digitale Werkzeuge fuer die moderne Imkerei.",
+    "Praxis-Tipps für Hobby-Imker im Imkerei-Blog: Varroa-Behandlung, Honig-Ernte, Bestandsbuch-Führung und digitale Werkzeuge für die moderne Imkerei.",
   alternates: { canonical: "/blog" },
   openGraph: {
-    title: "Imkerei-Blog: Tipps fuer Hobby-Imker | Imker-Logbuch Pro",
+    title: "Imkerei-Blog: Tipps für Hobby-Imker | Imker-Logbuch Pro",
     description:
-      "Praxis-Tipps fuer Hobby-Imker: Varroa-Behandlung, Honig-Ernte, Bestandsbuch-Fuehrung und digitale Werkzeuge fuer die moderne Imkerei.",
+      "Praxis-Tipps für Hobby-Imker: Varroa-Behandlung, Honig-Ernte, Bestandsbuch-Führung und digitale Werkzeuge für die moderne Imkerei.",
     url: `${siteConfig.url}/blog`,
     type: "website",
     locale: "de_DE",
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Imkerei-Blog: Tipps fuer Hobby-Imker | Imker-Logbuch Pro",
+    title: "Imkerei-Blog: Tipps für Hobby-Imker | Imker-Logbuch Pro",
     description:
-      "Praxis-Tipps fuer Hobby-Imker: Varroa-Behandlung, Honig-Ernte, Bestandsbuch-Fuehrung und digitale Werkzeuge.",
+      "Praxis-Tipps für Hobby-Imker: Varroa-Behandlung, Honig-Ernte, Bestandsbuch-Führung und digitale Werkzeuge.",
   },
 };
 

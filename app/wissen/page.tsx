@@ -15,14 +15,14 @@ import {
 export const metadata: Metadata = {
   title: "Imkerei-Wissen: Ratgeber und Pflichten",
   description:
-    "Wichtiges Wissen fuer Imker: Bestandsbuch-Pflicht, Varroa-Behandlung, Honig-Kennzeichnung und praktische Tipps fuer den Alltag am Bienenstand. Jetzt lesen!",
+    "Wichtiges Wissen für Imker: Bestandsbuch-Pflicht, Varroa-Behandlung, Honig-Kennzeichnung und praktische Tipps für den Alltag am Bienenstand. Jetzt lesen!",
   alternates: {
     canonical: `${siteConfig.url}/wissen`,
   },
   openGraph: {
     title: "Imkerei-Wissen: Ratgeber und Pflichten | Imker-Logbuch Pro",
     description:
-      "Wichtiges Wissen fuer Imker: Bestandsbuch-Pflicht, Varroa-Behandlung, Honig-Kennzeichnung und praktische Tipps.",
+      "Wichtiges Wissen für Imker: Bestandsbuch-Pflicht, Varroa-Behandlung, Honig-Kennzeichnung und praktische Tipps.",
     url: `${siteConfig.url}/wissen`,
   },
 };

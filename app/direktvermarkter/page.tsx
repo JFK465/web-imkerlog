@@ -8,14 +8,14 @@ import { Check, Tag, Package, Leaf, Euro, ShoppingCart } from "lucide-react";
 export const metadata: Metadata = {
   title: "Honig Direktvermarktung: Imker-Software",
   description:
-    "Honig direkt vermarkten mit der richtigen Software: Chargenverfolgung, Etikettengenerator und Qualitaetssicherung fuer Imker. Jetzt kostenlos starten!",
+    "Honig direkt vermarkten mit der richtigen Software: Chargenverfolgung, Etikettengenerator und Qualitätssicherung für Imker. Jetzt kostenlos starten!",
   alternates: {
     canonical: `${siteConfig.url}/direktvermarkter`,
   },
   openGraph: {
     title: "Honig Direktvermarktung: Imker-Software | Imker-Logbuch Pro",
     description:
-      "Honig direkt vermarkten mit der richtigen Software: Chargenverfolgung, Etikettengenerator und Qualitaetssicherung.",
+      "Honig direkt vermarkten mit der richtigen Software: Chargenverfolgung, Etikettengenerator und Qualitätssicherung.",
     url: `${siteConfig.url}/direktvermarkter`,
   },
 };

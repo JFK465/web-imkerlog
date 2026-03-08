@@ -8,7 +8,7 @@ import { Tag, Check, AlertCircle, Info } from "lucide-react";
 export const metadata: Metadata = {
   title: "Honig-Etikett: Pflichtangaben und Tipps",
   description:
-    "Welche Angaben muessen auf das Honig-Etikett? Rechtliche Anforderungen, Pflichtangaben und praktische Tipps fuer Imker zur Honig-Kennzeichnung nach LMIV.",
+    "Welche Angaben müssen auf das Honig-Etikett? Rechtliche Anforderungen, Pflichtangaben und praktische Tipps für Imker zur Honig-Kennzeichnung nach LMIV.",
   alternates: {
     canonical: `${siteConfig.url}/wissen/honig-etiketten`,
   },

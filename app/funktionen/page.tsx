@@ -17,14 +17,14 @@ import {
 export const metadata: Metadata = {
   title: "Funktionen der Bienenverwaltung-Software",
   description:
-    "Alle Funktionen von Imker-Logbuch Pro im Ueberblick: Stockkarten, QR-Code-Dokumentation, Varroa-Prognose, Bestandsbuch und Wetter-Integration fuer Imker.",
+    "Alle Funktionen von Imker-Logbuch Pro im Überblick: Stockkarten, QR-Code-Dokumentation, Varroa-Prognose, Bestandsbuch und Wetter-Integration für Imker.",
   alternates: {
     canonical: `${siteConfig.url}/funktionen`,
   },
   openGraph: {
     title: "Funktionen der Bienenverwaltung-Software | Imker-Logbuch Pro",
     description:
-      "Alle Funktionen von Imker-Logbuch Pro im Ueberblick: Stockkarten, QR-Code-Dokumentation, Varroa-Prognose und mehr.",
+      "Alle Funktionen von Imker-Logbuch Pro im Überblick: Stockkarten, QR-Code-Dokumentation, Varroa-Prognose und mehr.",
     url: `${siteConfig.url}/funktionen`,
   },
 };

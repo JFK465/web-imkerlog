@@ -5,16 +5,16 @@ import { WebPageSchema } from "@/components/seo/StructuredData";
 import { BienenverwaltungSoftwareClient } from "./BienenverwaltungSoftwareClient";
 
 export const metadata: Metadata = {
-  title: "Bienenverwaltung Software fuer Imker",
+  title: "Bienenverwaltung Software für Imker",
   description:
-    "Die professionelle Bienenverwaltung Software fuer Hobby-Imker und Direktvermarkter. QR-Codes, rechtskonformes Bestandsbuch und Varroa-Prognose inklusive.",
+    "Die professionelle Bienenverwaltung Software für Hobby-Imker und Direktvermarkter. QR-Codes, rechtskonformes Bestandsbuch und Varroa-Prognose inklusive.",
   alternates: {
     canonical: `${siteConfig.url}/bienenverwaltung-software`,
   },
   openGraph: {
-    title: "Bienenverwaltung Software fuer Imker | Imker-Logbuch Pro",
+    title: "Bienenverwaltung Software für Imker | Imker-Logbuch Pro",
     description:
-      "Die professionelle Bienenverwaltung Software fuer Hobby-Imker und Direktvermarkter. QR-Codes, Bestandsbuch und Varroa-Prognose.",
+      "Die professionelle Bienenverwaltung Software für Hobby-Imker und Direktvermarkter. QR-Codes, Bestandsbuch und Varroa-Prognose.",
     url: `${siteConfig.url}/bienenverwaltung-software`,
   },
 };
@@ -23,8 +23,8 @@ export default function BienenverwaltungSoftwarePage() {
   return (
     <>
       <WebPageSchema
-        title="Bienenverwaltung Software fuer Imker | Imker-Logbuch Pro"
-        description="Die professionelle Bienenverwaltung Software fuer Hobby-Imker und Direktvermarkter."
+        title="Bienenverwaltung Software für Imker | Imker-Logbuch Pro"
+        description="Die professionelle Bienenverwaltung Software für Hobby-Imker und Direktvermarkter."
         path="/bienenverwaltung-software"
       />
       <Breadcrumbs

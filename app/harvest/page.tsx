@@ -13,7 +13,7 @@ const LabelGenerator = dynamic(
 export const metadata: Metadata = {
   title: "Honig-Ernte dokumentieren und Etiketten",
   description:
-    "Dokumentieren Sie Ihre Honig-Ernte digital und generieren Sie professionelle Etiketten fuer Ihre Glaeser. Chargenverfolgung und LMIV-konforme Labels inklusive.",
+    "Dokumentieren Sie Ihre Honig-Ernte digital und generieren Sie professionelle Etiketten für Ihre Glaeser. Chargenverfolgung und LMIV-konforme Labels inklusive.",
   alternates: { canonical: "/harvest" },
 };
 
@@ -22,7 +22,7 @@ export default function HarvestPage() {
     <main className="min-h-screen bg-gradient-to-b from-amber-50 to-orange-50 py-20">
       <WebPageSchema
         title="Honig-Ernte dokumentieren und Etiketten erstellen"
-        description="Dokumentieren Sie Ihre Honig-Ernte digital und generieren Sie professionelle Etiketten fuer Ihre Glaeser."
+        description="Dokumentieren Sie Ihre Honig-Ernte digital und generieren Sie professionelle Etiketten für Ihre Glaeser."
         path="/harvest"
       />
       <div className="container mx-auto px-4">

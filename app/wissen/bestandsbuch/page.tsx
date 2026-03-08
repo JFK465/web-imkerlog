@@ -12,9 +12,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Bestandsbuch-Pflicht fuer Imker",
+  title: "Bestandsbuch-Pflicht für Imker",
   description:
-    "Welche Eintragungen sind im Bestandsbuch Pflicht? Alle rechtlichen Anforderungen und Dokumentationspflichten fuer Imker in Deutschland einfach erklaert.",
+    "Welche Eintragungen sind im Bestandsbuch Pflicht? Alle rechtlichen Anforderungen und Dokumentationspflichten für Imker in Deutschland einfach erklärt.",
   alternates: {
     canonical: `${siteConfig.url}/wissen/bestandsbuch`,
   },

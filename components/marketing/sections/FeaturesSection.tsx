@@ -19,7 +19,7 @@ interface FeaturesSectionProps {
   unteruberschrift?: string;
   features?: Feature[];
   kundenZitat?: string;
-  schmerzAufloesung?: string;
+  schmerzAuflösung?: string;
 }
 
 const defaultFeatures: Feature[] = [
@@ -70,7 +70,7 @@ export function FeaturesSection({
   unteruberschrift = "Funktionen, die Ihren Alltag verändern",
   features = defaultFeatures,
   kundenZitat = "",
-  schmerzAufloesung = "Alles im Griff, vom Smartphone aus",
+  schmerzAuflösung = "Alles im Griff, vom Smartphone aus",
 }: FeaturesSectionProps) {
   return (
     <section
@@ -110,7 +110,7 @@ export function FeaturesSection({
         <AnimatedSection direction="up" delay={0.3}>
           <div className="mt-12 text-center">
             <p className="text-lg font-semibold font-display text-earth-800 mb-2">
-              {schmerzAufloesung}
+              {schmerzAuflösung}
             </p>
             <p className="text-earth-500">
               Alle Features funktionieren auch offline am Bienenstand.

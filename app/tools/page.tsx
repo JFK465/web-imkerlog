@@ -6,16 +6,16 @@ import { siteConfig } from "@/lib/seo-config";
 import { Calculator, Bug, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Kostenlose Tools und Rechner fuer Imker",
+  title: "Kostenlose Tools und Rechner für Imker",
   description:
-    "Kostenlose Online-Tools und Rechner fuer Imker: Honig-Ernte-Rechner, Varroa-Prognose und weitere nuetzliche Werkzeuge fuer die digitale Bienenverwaltung.",
+    "Kostenlose Online-Tools und Rechner für Imker: Honig-Ernte-Rechner, Varroa-Prognose und weitere nuetzliche Werkzeuge für die digitale Bienenverwaltung.",
   alternates: {
     canonical: `${siteConfig.url}/tools`,
   },
   openGraph: {
-    title: "Kostenlose Tools und Rechner fuer Imker | Imker-Logbuch Pro",
+    title: "Kostenlose Tools und Rechner für Imker | Imker-Logbuch Pro",
     description:
-      "Kostenlose Online-Tools und Rechner fuer Imker: Honig-Ernte-Rechner, Varroa-Prognose und mehr.",
+      "Kostenlose Online-Tools und Rechner für Imker: Honig-Ernte-Rechner, Varroa-Prognose und mehr.",
     url: `${siteConfig.url}/tools`,
   },
 };
