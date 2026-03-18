@@ -1,25 +1,25 @@
-"use client"
+"use client";
 
-import { useState, useMemo } from "react"
-import Link from "next/link"
-import { Breadcrumbs } from "@/components/layout/Breadcrumbs"
-import { WebPageSchema } from "@/components/seo/StructuredData"
-import { Calculator, Info, ArrowRight, Check } from "lucide-react"
+import { useState, useMemo } from "react";
+import Link from "next/link";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { WebPageSchema } from "@/components/seo/StructuredData";
+import { Calculator, Info, ArrowRight, Check } from "lucide-react";
 
 export function HonigRechnerClient() {
-  const [volker, setVolker] = useState(5)
-  const [durchschnitt, setDurchschnitt] = useState(30)
-  const [standorte, setStandorte] = useState(1)
+  const [volker, setVolker] = useState(5);
+  const [durchschnitt, setDurchschnitt] = useState(30);
+  const [standorte, setStandorte] = useState(1);
 
   const ergebnis = useMemo(() => {
-    const gesamtErtrag = volker * durchschnitt * standorte
+    const gesamtErtrag = volker * durchschnitt * standorte;
     return {
       gesamt: gesamtErtrag,
       glas500: Math.round(gesamtErtrag / 0.5),
       glas250: Math.round(gesamtErtrag / 0.25),
       glaser: Math.round(gesamtErtrag / 0.5) * 2.5,
-    }
-  }, [volker, durchschnitt, standorte])
+    };
+  }, [volker, durchschnitt, standorte]);
 
   return (
     <>
@@ -28,10 +28,12 @@ export function HonigRechnerClient() {
         description="Berechnen Sie Ihren voraussichtlichen Honig-Ertrag basierend auf Ihrer Völkerzahl."
         path="/tools/honig-rechner"
       />
-      <Breadcrumbs items={[
-        { name: "Tools", href: "/tools" },
-        { name: "Honig-Ernte-Rechner", href: "/tools/honig-rechner" }
-      ]} />
+      <Breadcrumbs
+        items={[
+          { name: "Tools", href: "/tools" },
+          { name: "Honig-Ernte-Rechner", href: "/tools/honig-rechner" },
+        ]}
+      />
 
       <section className="bg-gradient-to-b from-amber-50 via-orange-50 to-yellow-50 py-12 md:py-16">
         <div className="container mx-auto max-w-3xl px-4">
@@ -43,7 +45,8 @@ export function HonigRechnerClient() {
             Honig-Ernte-Rechner
           </h1>
           <p className="mt-4 text-lg text-earth-600">
-            Berechnen Sie Ihren voraussichtlichen Honig-Ertrag basierend auf Ihrer Völkerzahl.
+            Berechnen Sie Ihren voraussichtlichen Honig-Ertrag basierend auf
+            Ihrer Völkerzahl.
           </p>
         </div>
       </section>
@@ -57,10 +60,14 @@ export function HonigRechnerClient() {
 
             <div className="space-y-6">
               <div>
-                <label className="block text-sm font-medium text-earth-700 mb-2">
+                <label
+                  htmlFor="volker"
+                  className="block text-sm font-medium text-earth-700 mb-2"
+                >
                   Anzahl der Völker
                 </label>
                 <input
+                  id="volker"
                   type="range"
                   min="1"
                   max="100"
@@ -70,16 +77,22 @@ export function HonigRechnerClient() {
                 />
                 <div className="flex justify-between mt-2">
                   <span className="text-sm text-earth-500">1 Volk</span>
-                  <span className="font-semibold text-earth-900">{volker} Völker</span>
+                  <span className="font-semibold text-earth-900">
+                    {volker} Völker
+                  </span>
                   <span className="text-sm text-earth-500">100 Völker</span>
                 </div>
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-earth-700 mb-2">
+                <label
+                  htmlFor="durchschnitt"
+                  className="block text-sm font-medium text-earth-700 mb-2"
+                >
                   Durchschnittsertrag pro Volk (kg)
                 </label>
                 <input
+                  id="durchschnitt"
                   type="range"
                   min="5"
                   max="80"
@@ -89,16 +102,22 @@ export function HonigRechnerClient() {
                 />
                 <div className="flex justify-between mt-2">
                   <span className="text-sm text-earth-500">5 kg</span>
-                  <span className="font-semibold text-earth-900">{durchschnitt} kg</span>
+                  <span className="font-semibold text-earth-900">
+                    {durchschnitt} kg
+                  </span>
                   <span className="text-sm text-earth-500">80 kg</span>
                 </div>
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-earth-700 mb-2">
+                <label
+                  htmlFor="standorte"
+                  className="block text-sm font-medium text-earth-700 mb-2"
+                >
                   Anzahl der Standorte
                 </label>
                 <input
+                  id="standorte"
                   type="range"
                   min="1"
                   max="10"
@@ -108,7 +127,9 @@ export function HonigRechnerClient() {
                 />
                 <div className="flex justify-between mt-2">
                   <span className="text-sm text-earth-500">1 Standort</span>
-                  <span className="font-semibold text-earth-900">{standorte} Standorte</span>
+                  <span className="font-semibold text-earth-900">
+                    {standorte} Standorte
+                  </span>
                   <span className="text-sm text-earth-500">10 Standorte</span>
                 </div>
               </div>
@@ -124,16 +145,24 @@ export function HonigRechnerClient() {
               </div>
               <div className="grid gap-3 sm:grid-cols-3">
                 <div className="bg-white rounded-lg p-3 text-center">
-                  <div className="text-xl font-bold text-earth-900">{ergebnis.glas500}</div>
+                  <div className="text-xl font-bold text-earth-900">
+                    {ergebnis.glas500}
+                  </div>
                   <div className="text-xs text-earth-500">500g Gläser</div>
                 </div>
                 <div className="bg-white rounded-lg p-3 text-center">
-                  <div className="text-xl font-bold text-earth-900">{ergebnis.glas250}</div>
+                  <div className="text-xl font-bold text-earth-900">
+                    {ergebnis.glas250}
+                  </div>
                   <div className="text-xs text-earth-500">250g Gläser</div>
                 </div>
                 <div className="bg-white rounded-lg p-3 text-center">
-                  <div className="text-xl font-bold text-earth-900">~{ergebnis.glaser.toFixed(1)} €</div>
-                  <div className="text-xs text-earth-500">~Umsatz (2,50€/Gl)</div>
+                  <div className="text-xl font-bold text-earth-900">
+                    ~{ergebnis.glaser.toFixed(1)} €
+                  </div>
+                  <div className="text-xs text-earth-500">
+                    ~Umsatz (2,50€/Gl)
+                  </div>
                 </div>
               </div>
             </div>
@@ -141,8 +170,9 @@ export function HonigRechnerClient() {
             <div className="mt-4 flex items-start gap-2 text-sm text-earth-500">
               <Info className="h-4 w-4 mt-0.5 flex-shrink-0" />
               <p>
-                Dies ist eine grobe Schätzung. Der tatsächliche Ertrag hängt von vielen
-                Faktoren ab: Wetter, Trachtangebot, Volksstärke, Varroa-Befall und mehr.
+                Dies ist eine grobe Schätzung. Der tatsächliche Ertrag hängt von
+                vielen Faktoren ab: Wetter, Trachtangebot, Volksstärke,
+                Varroa-Befall und mehr.
               </p>
             </div>
           </div>
@@ -156,8 +186,8 @@ export function HonigRechnerClient() {
             Möchten Sie Ihren Ertrag professionell dokumentieren?
           </h2>
           <p className="mt-4 text-earth-600">
-            Mit Imker-Logbuch Pro können Sie alle Ernten dokumentieren und behalten
-            den Überblick über Ihre Produktion.
+            Mit Imker-Logbuch Pro können Sie alle Ernten dokumentieren und
+            behalten den Überblick über Ihre Produktion.
           </p>
           <Link
             href="/signup"
@@ -169,5 +199,5 @@ export function HonigRechnerClient() {
         </div>
       </section>
     </>
-  )
+  );
 }

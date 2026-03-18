@@ -98,7 +98,7 @@ export function HeroSection({
                   className="gradient-honey text-white font-semibold shadow-glow hover:scale-105 transition-all duration-300"
                   asChild
                 >
-                  <Link href="/signup">
+                  <Link href="/bienenverwaltung-software">
                     {primarerCTA}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>

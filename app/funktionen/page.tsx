@@ -107,9 +107,9 @@ export default function FunktionenPage() {
                 <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-amber-100 to-orange-100">
                   <feature.icon className="h-6 w-6 text-amber-600" />
                 </div>
-                <h3 className="text-lg font-semibold text-earth-900">
+                <h2 className="text-lg font-semibold text-earth-900">
                   {feature.title}
-                </h3>
+                </h2>
                 <p className="mt-2 text-sm text-earth-600">
                   {feature.description}
                 </p>

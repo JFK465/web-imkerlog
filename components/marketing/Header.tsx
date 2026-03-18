@@ -57,7 +57,7 @@ export function Header() {
             asChild
             className="gradient-honey text-white shadow-warm hover:shadow-glow transition-all"
           >
-            <Link href="/signup">Kostenlos Beta testen</Link>
+            <Link href="/bienenverwaltung-software">Kostenlos Beta testen</Link>
           </Button>
         </nav>
 
@@ -99,7 +99,10 @@ export function Header() {
                   asChild
                   className="gradient-honey text-white shadow-warm hover:shadow-glow w-full"
                 >
-                  <Link href="/signup" onClick={() => setIsOpen(false)}>
+                  <Link
+                    href="/bienenverwaltung-software"
+                    onClick={() => setIsOpen(false)}
+                  >
                     Kostenlos Beta testen
                   </Link>
                 </Button>

@@ -151,7 +151,9 @@ export function ValueProposition({
                 className="gradient-honey text-white font-semibold shadow-warm hover:shadow-glow hover:scale-105 transition-all duration-300"
                 asChild
               >
-                <Link href="/signup">Jetzt kostenlos Beta testen</Link>
+                <Link href="/bienenverwaltung-software">
+                  Jetzt kostenlos Beta testen
+                </Link>
               </Button>
               <p className="mt-4 text-sm text-earth-500">
                 {zeitErsparnis} -- versprochen.

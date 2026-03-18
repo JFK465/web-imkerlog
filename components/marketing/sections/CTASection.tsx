@@ -1,21 +1,21 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Check } from "lucide-react"
-import Link from "next/link"
-import { AnimatedSection } from "@/components/ui/animated-section"
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Check } from "lucide-react";
+import Link from "next/link";
+import { AnimatedSection } from "@/components/ui/animated-section";
 import {
   HoneycombPattern,
   WaveDivider,
-} from "@/components/ui/decorative-elements"
+} from "@/components/ui/decorative-elements";
 
 interface CTASectionProps {
-  problem?: string
-  ctaText?: string
-  inklusion?: string[]
-  knappheit?: string
-  zeitstempel?: string
-  bonus?: string
+  problem?: string;
+  ctaText?: string;
+  inklusion?: string[];
+  knappheit?: string;
+  zeitstempel?: string;
+  bonus?: string;
 }
 
 export function CTASection({
@@ -47,8 +47,8 @@ export function CTASection({
 
           <AnimatedSection direction="up" delay={0.1}>
             <p className="text-xl mb-8 text-white/90 leading-relaxed">
-              Hören Sie auf, Zeit mit Verwaltung zu verschwenden.
-              Konzentrieren Sie sich auf das, was wirklich zählt: Ihre Bienen.
+              Hören Sie auf, Zeit mit Verwaltung zu verschwenden. Konzentrieren
+              Sie sich auf das, was wirklich zählt: Ihre Bienen.
             </p>
           </AnimatedSection>
 
@@ -59,7 +59,7 @@ export function CTASection({
                 className="bg-white text-honey-600 hover:bg-honey-50 font-bold shadow-warm hover:shadow-glow transition-all duration-300 px-8"
                 asChild
               >
-                <Link href="/signup">
+                <Link href="/bienenverwaltung-software">
                   {ctaText}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
@@ -71,7 +71,10 @@ export function CTASection({
           <AnimatedSection direction="up" delay={0.3}>
             <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-6">
               {inklusion.map((item, index) => (
-                <div key={index} className="flex items-center text-sm text-white/90">
+                <div
+                  key={index}
+                  className="flex items-center text-sm text-white/90"
+                >
                   <Check className="h-4 w-4 mr-2 text-white" />
                   {item}
                 </div>
@@ -93,5 +96,5 @@ export function CTASection({
         </div>
       </div>
     </section>
-  )
+  );
 }
