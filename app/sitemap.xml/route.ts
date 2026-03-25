@@ -39,12 +39,6 @@ function buildEntries(): SitemapEntry[] {
       changefreq: "monthly",
       priority: 0.8,
     },
-    {
-      url: `${baseUrl}/kontakt`,
-      lastmod: new Date().toISOString(),
-      changefreq: "yearly",
-      priority: 0.5,
-    },
 
     // Software Landing Page
     {
